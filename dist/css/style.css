@@ -8,6 +8,16 @@ body {
   overflow-x: hidden ;
   font-family: Brandon Grotesque;
 }
+.block,
+.page-content {
+  float: left;
+  width: 100%;
+}
+.blockin,
+.page-content .we-build {
+  display: inline-block;
+  width: 100%;
+}
 a {
   color: #333;
   text-decoration: none;
@@ -95,48 +105,12 @@ ul {
   width: 4%;
   z-index: 9;
 }
-.page-content {
-  height: 600px;
-  background: #f3f3f3 none repeat scroll 0 0;
-}
 .portfolio-slider {
   background: #9f9f9f;
   height: 100%;
   overflow: hidden;
   position: absolute;
   width: 100%;
-}
-.ps-leftbar {
-  height: 100%;
-  position: absolute;
-  width: 400px;
-  z-index: 99;
-}
-.right-arrow {
-  background: transparent url("../images/right-arrow.png") no-repeat scroll -4px 0;
-  height: 100%;
-  left: 100%;
-  position: absolute;
-  width: 100%;
-  background-size: 100% 100%;
-}
-.ps-left-content {
-  background: #fff none repeat scroll 0 0 padding-box content-box;
-  height: 100%;
-  padding-top: 100px;
-  position: absolute;
-  width: 100%;
-  z-index: 20;
-}
-.logo {
-  border: 16px solid #fff;
-  float: left;
-  width: 100%;
-  position: absolute;
-  top: 0;
-}
-.logo img {
-  position: relative;
 }
 .bg-images {
   background: #9f9f9f url("../images/img/Bg-screnshot.jpg") repeat scroll -5px 0;
@@ -199,4 +173,74 @@ ul {
   z-index: 15;
   left: 362px;
   top: -147px;
+}
+.page-content {
+  background: #fff none repeat scroll 0 0;
+  padding: 70px 0;
+}
+.page-content .head2 {
+  font-size: 66px;
+  font-weight: 600;
+  text-align: center;
+}
+.page-content .we-build {
+  margin-left: -10%;
+  margin-top: 80px;
+  text-align: center;
+  width: 120%;
+}
+.page-content .we-build .anim-sprt {
+  background: transparent url("../images/sprt.jpg") no-repeat scroll center center;
+  height: 730px;
+  left: 50%;
+  margin-left: -50px;
+  position: absolute;
+  text-align: center;
+  width: 100px;
+}
+.page-content .we-build .anim-sprt .cont {
+  color: blue;
+}
+.page-content .we-build .anim-sprt .line {
+  color: red;
+}
+.page-content .we-build h3 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-top: 35px;
+}
+.page-content .we-build p {
+  display: table;
+  font-size: 27px;
+  font-weight: 500;
+  margin: 14px auto 24px;
+  max-width: 1150px;
+}
+.page-content .we-build a {
+  color: #008cb1;
+  font-size: 28px;
+  font-weight: 500;
+}
+.page-content .we-build a i {
+  border: 1px solid;
+  border-radius: 20px;
+  font-size: 17px;
+  height: 30px;
+  margin-left: 6px;
+  padding: 6px 9px;
+  transform: translate(0px, -3px);
+  width: 30px;
+}
+.page-content .we-build .build-info {
+  padding: 0 60px;
+  text-align: center;
+}
+.page-content .we-build .build-info.left {
+  float: left;
+}
+.page-content .we-build .build-info.right {
+  float: right;
+}
+.page-content .we-build .build-info img {
+  width: 480px;
 }
