@@ -18,6 +18,15 @@ body {
   display: inline-block;
   width: 100%;
 }
+.transition,
+.portfolio .portfolio-item .portfolio-item-content::before,
+.portfolio .portfolio-item .portfolio-item-content img {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
 a {
   color: #333;
   text-decoration: none;
@@ -43,6 +52,80 @@ ul {
   top: 0;
   width: 100%;
   transition: left 0.4s ease 0s,top 0.4s ease 0s;
+}
+header {
+  padding: 40px 50px;
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+}
+header .logo {
+  width: 145px;
+}
+header .logo img {
+  width: 100%;
+}
+header .btn-nav {
+  background-color: #fff;
+  color: #fff;
+  display: block;
+  font-size: 0.875em;
+  height: 40px;
+  position: fixed;
+  right: 4em;
+  text-transform: uppercase;
+  top: 4em;
+  width: 44px;
+  z-index: 99;
+}
+header .btn-nav::before {
+  color: #fff;
+  content: "MENU";
+  font-size: 22px;
+  font-weight: 500;
+  position: absolute;
+  right: 130%;
+  top: 7px;
+}
+header .btn-nav span {
+  background: #00799B none repeat scroll 0 0;
+  height: 2px;
+  position: absolute;
+  right: 9px;
+  top: 19px;
+  transition: all 200ms ease 0s;
+  width: 26px;
+  z-index: 2;
+}
+header .btn-nav span::before,
+header .btn-nav span::after {
+  background: #00799B none repeat scroll 0 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transition: all 200ms ease 0s;
+  width: 100%;
+}
+header .btn-nav span::before {
+  top: -7px;
+}
+header .btn-nav span::after {
+  top: 7px;
+}
+header .btn-nav.active span {
+  background: transparent none repeat scroll 0 0;
+  transform: rotate(90deg);
+}
+header .btn-nav.active span::before {
+  top: 0;
+  transform: rotate(-45deg);
+  transition-delay: 300ms;
+}
+header .btn-nav.active span:after {
+  top: 0;
+  transform: rotate(45deg);
+  transition-delay: 300ms;
 }
 .main-slider {
   height: 100%;
@@ -178,12 +261,6 @@ ul {
   background: #fff none repeat scroll 0 0;
   padding: 70px 0;
 }
-.page-content .head2 {
-  font-size: 66px;
-  font-weight: 600;
-  text-align: center;
-  text-transform: uppercase;
-}
 .page-content .we-build {
   margin-left: -10%;
   margin-top: 80px;
@@ -245,6 +322,12 @@ ul {
 }
 .page-content .we-build .build-info img {
   width: 480px;
+}
+.head2 {
+  font-size: 56px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
 }
 .technologies {
   background: transparent url("../images/technologies-big.svg") no-repeat scroll center 0;
@@ -322,14 +405,15 @@ ul {
   width: 100%;
 }
 .portfolio {
-  height: 800px;
+  display: table;
   margin: 80px auto;
   max-width: 1500px;
 }
+.portfolio .head2 {
+  margin-bottom: 40px;
+}
 .portfolio .portfolio-item {
-  background: #ebebeb none repeat scroll 0 0 padding-box content-box;
   float: left;
-  height: 320px;
   padding: 14px;
 }
 .portfolio .portfolio-item.small-width {
@@ -337,4 +421,62 @@ ul {
 }
 .portfolio .portfolio-item.large-with {
   width: 50%;
+}
+.portfolio .portfolio-item .portfolio-item-content {
+  background: #ebebeb none repeat scroll 0 0;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.portfolio .portfolio-item .portfolio-item-content::before {
+  background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.portfolio .portfolio-item .portfolio-item-content img {
+  width: 100%;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.portfolio .portfolio-item .portfolio-item-content:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.portfolio .portfolio-item .portfolio-item-content:hover::before {
+  background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+}
+.portfolio .portfolio-item .abs-box {
+  bottom: 0;
+  padding: 17px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.portfolio .portfolio-item .abs-box h3 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 5px;
+}
+.portfolio .portfolio-item .abs-box span {
+  color: #f3f3f3;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.portfolio .portfolio-item .abs-box a {
+  color: #00c0e5;
+  font-size: 18px;
 }

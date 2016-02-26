@@ -137,4 +137,9 @@
 				$(".bg-images img:eq(9)").css({ 'left': startX - 250 + (shiftX/8) + 'px', 'top': startY + 60 + (shiftY/8) + 'px' });
 				$(".bg-images img:eq(10)").css({ 'left': startX - 260 + (shiftX/8) + 'px', 'top': startY + 60 + (shiftY/8) + 'px' });
 			});
+
+
+			$(".js-open-nav").click(function(){
+				$(this).toggleClass("active");
+			});
 		});
