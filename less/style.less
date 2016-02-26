@@ -202,6 +202,7 @@ ul{
     font-size: 66px;
     font-weight: 600;
     text-align: center;
+    text-transform: uppercase;
   }
   .we-build{
     &:extend(.blockin);
@@ -230,6 +231,7 @@ ul{
       font-size: 60px;
       font-weight: 700;
       margin-top: 35px;
+      text-transform: uppercase;
     }
     p{
       display: table;
@@ -269,9 +271,102 @@ ul{
     }
   }
 }
+.technologies{
+  background: transparent url("../images/technologies-big.svg") no-repeat scroll center 0;
+  height: 2270px;
+  margin-top: 70px;
+  position: relative;
+  .technologies-info{
+    position: absolute;
+    width: 48%;
+    &:nth-child(n){
+      right: 0;
+      top: 420px;
+    }
+    &:nth-child(2n){
+      right: 560px;
+      top: 1010px;
+    }
+    &:nth-child(3n){
+      right: 0;
+      top: 1510px;
+    }
+    h4{
+      font-size: 45px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    p{
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+  &.technologies1{
+    background: transparent url("../images/integrations-big.svg") no-repeat scroll right 0;
+    height: 630px;
+    .technologies-info1{
+      left: 0;
+      top: 53px;
+      width: 55%;
+    }
+  }
+}
 
+.detailed-info{
+  background: #f4f4f4 none repeat scroll 0 0;
+  clear: both;
+  padding: 80px 0;
+  .detailed-item{
+    -webkit-box-shadow: 1px 0 0 #c3c3c3;
+    -moz-box-shadow: 1px 0 0 #c3c3c3;
+    box-shadow: 1px 0 0 #c3c3c3;
+    float: left;
+    padding: 0 42px;
+    width: 25%;
+    &:last-child{
+      box-shadow: 0 0 0 #c3c3c3;
+    }
+    img{
+      margin: 0 0 0 -7px;
+    }
+    h3{
+      font-size: 40px;
+      font-weight: 600;
+      margin: 8px 0 -1px;
+    }
+    span{
+      color: #aaaaaa;
+      float: left;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.2;
+      padding: 0 2px;
+      text-transform: capitalize;
+      width: 100%;
+    }
+  }
+}
+.portfolio{
+  height: 800px;
+  margin: 80px auto;
+  max-width: 1500px;
 
+  .portfolio-item{
+    background: #ebebeb none repeat scroll 0 0 padding-box content-box;
+    float: left;
+    height: 320px;
+    padding: 14px;
 
+    &.small-width{
+      width: 25%;
+    }
+    &.large-with{
+      width: 50%;
+    }
+  }
+
+}
 
 
 
