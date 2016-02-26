@@ -54,8 +54,8 @@ ul {
   transition: left 0.4s ease 0s,top 0.4s ease 0s;
 }
 header {
-  padding: 40px 50px;
-  position: absolute;
+  padding: 50px;
+  position: fixed;
   width: 100%;
   z-index: 9999;
 }
@@ -71,7 +71,7 @@ header .btn-nav {
   display: block;
   font-size: 0.875em;
   height: 40px;
-  position: fixed;
+  position: absolute;
   right: 4em;
   text-transform: uppercase;
   top: 4em;
@@ -479,4 +479,9 @@ header .btn-nav.active span:after {
 .portfolio .portfolio-item .abs-box a {
   color: #00c0e5;
   font-size: 18px;
+}
+footer {
+  background: #dadada none repeat scroll 0 0;
+  height: 310px;
+  width: 100%;
 }
