@@ -19,6 +19,7 @@ body {
   width: 100%;
 }
 .transition,
+header,
 .portfolio .portfolio-item .portfolio-item-content::before,
 .portfolio .portfolio-item .portfolio-item-content img {
   -webkit-transition: all 0.3s ease 0s;
@@ -59,8 +60,13 @@ header {
   width: 100%;
   z-index: 9999;
 }
+header.colored {
+  background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+  padding: 20px 50px;
+}
 header .logo {
   width: 145px;
+  float: left;
 }
 header .logo img {
   width: 100%;
@@ -68,15 +74,13 @@ header .logo img {
 header .btn-nav {
   background-color: #fff;
   color: #fff;
-  display: block;
+  cursor: pointer;
+  float: right;
   font-size: 0.875em;
   height: 40px;
-  position: absolute;
-  right: 4em;
+  position: relative;
   text-transform: uppercase;
-  top: 4em;
   width: 44px;
-  z-index: 99;
 }
 header .btn-nav::before {
   color: #fff;
@@ -126,6 +130,86 @@ header .btn-nav.active span:after {
   top: 0;
   transform: rotate(45deg);
   transition-delay: 300ms;
+}
+.menu-bar {
+  background: #2e2e2e none repeat scroll 0 0;
+  height: 100%;
+  padding-top: 130px;
+  position: fixed;
+  right: -400px;
+  transition: all 0.3s ease 0s;
+  width: 400px;
+  z-index: 999;
+}
+.menu-bar.active1 {
+  right: 0;
+}
+.menu-bar ul {
+  margin: 11px 0;
+  padding: 0 37px;
+}
+.menu-bar ul li {
+  text-align: right;
+}
+.menu-bar ul li a {
+  color: #8b8b8b;
+  display: inline-block;
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  position: relative;
+}
+.menu-bar ul li a .nav-link-mask {
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transform: translate3d(-100%, 0px, 0px);
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  width: 100%;
+}
+.menu-bar ul li a .nav-link-mask .nav-link-mask-text {
+  color: #ddd;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate3d(100%, 0px, 0px);
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+.menu-bar ul li a:hover .nav-link-mask,
+.menu-bar ul li a:focus .nav-link-mask {
+  transform: translate3d(0px, 0px, 0px);
+}
+.menu-bar ul li a:hover .nav-link-mask-text,
+.menu-bar ul li a:focus .nav-link-mask-text {
+  transform: translate3d(0px, 0px, 0px);
+}
+.menu-bar ul li.active {
+  border-bottom: 1px solid #666666;
+  margin-bottom: 11px;
+}
+.menu-bar ul li.active a .nav-link-mask,
+.menu-bar ul li.active a .nav-link-mask-text {
+  transform: translate3d(0px, 0px, 0px);
+}
+.social-icons {
+  background: #282828 none repeat scroll 0 0;
+  margin-top: 27px;
+  padding: 15px 40px;
+  text-align: right;
+}
+.social-icons span {
+  color: #fff;
+  font-size: 17px;
+  margin-right: 9px;
+}
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 3px;
 }
 .main-slider {
   height: 100%;

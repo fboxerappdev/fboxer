@@ -52,9 +52,6 @@
 				else{
 					imgheight = winheight;
 				}
-
-
-
 				var winw = window.innerWidth;
 
 
@@ -141,5 +138,26 @@
 
 			$(".js-open-nav").click(function(){
 				$(this).toggleClass("active");
+				$(".menu-bar").toggleClass("active1");
+			});
+
+
+			$( ".menu-bar ul li").each(function( index ) {
+				var text = $(">a",this).text();
+				$(">a",this).append('<span class="nav-link-mask"><span class="nav-link-mask-text">'+ text +'</span></span>');
+			});
+
+
+			var element = $("header");
+			var options = winheight;
+			function shownav(options , element){
+				if ($(window).scrollTop() > options ) {
+					element.addClass("colored");
+				} else {
+					element.removeClass("colored");
+				}
+			}
+			$(window).scroll(function(){
+				shownav(options , element);
 			});
 		});
