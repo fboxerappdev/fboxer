@@ -60,7 +60,7 @@ header{
   &:extend(.transition);
   &.colored{
     background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
-    padding: 20px 50px;
+    padding: 14px 50px;
   }
   .logo{
     width: 145px;
@@ -358,6 +358,8 @@ header{
 .page-content{
   background: #fff none repeat scroll 0 0;
   padding: 70px 0;
+  position: relative;
+  z-index: 1;
   &:extend(.block);
 
   .we-build{
@@ -479,6 +481,8 @@ header{
   background: #f4f4f4 none repeat scroll 0 0;
   clear: both;
   padding: 80px 0;
+  position: relative;
+  z-index: 1;
   .detailed-item{
     -webkit-box-shadow: 1px 0 0 #c3c3c3;
     -moz-box-shadow: 1px 0 0 #c3c3c3;
@@ -511,7 +515,7 @@ header{
 }
 .portfolio{
   display: table;
-  margin: 80px auto;
+  margin: 0 auto;
   max-width: 1500px;
   .head2{
     margin-bottom:40px;
@@ -587,11 +591,68 @@ header{
     }
   }
 }
-footer{
-  background: #dadada none repeat scroll 0 0;
-  height: 310px;
-  width: 100%;
+.testimonial {
+  background: transparent url("../images/bg1.jpg") no-repeat scroll 0 0 / cover ;
+  clear: both;
+  height: 800px;
+  position: relative;
+  z-index: 1;
+  &:before{
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
 }
+
+footer{
+  background: #fff none repeat scroll 0 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+  .footer{
+    float: left;
+    padding: 60px 0;
+    width: 100%;
+    h3{
+      font-size: 42px;
+      font-weight: 600;
+      line-height: 1;
+      margin: 8px 0;
+      text-transform: uppercase;
+    }
+    h4{
+      border-bottom: 1px solid #aaa;
+      font-size: 17px;
+      padding-bottom: 10px;
+    }
+    p{
+      font-size: 15px;
+      margin: 2px 0;
+      color:#898989;
+    }
+    ul{
+      li{
+        a,span{
+          display: inline-block;
+          font-size: 15px;
+          color:#898989;
+          margin-bottom: 0;
+          text-transform: capitalize;
+          &:hover{
+            color:#333;
+          }
+        }
+        span{
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+
 
 
 

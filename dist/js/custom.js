@@ -160,4 +160,8 @@
 			$(window).scroll(function(){
 				shownav(options , element);
 			});
+
+
+			var footerheight = $("footer").height();
+			$("<div></div>").insertBefore('footer').css("height",footerheight);
 		});
