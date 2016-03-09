@@ -98,15 +98,14 @@
 				}
 			}
 
+			$(".imgs").ready(function(){
+				runcode();
+				setTimeout(function(){
+					runcode();
+				}, 300);
+			});
 
-			//$(".imgs").ready(function(){
-			//	runcode();
-			//	setTimeout(function(){
-			//		runcode();
-			//	}, 300);
-			//});
-
-			runcode();
+			//runcode();
 
 			$(".portfolio-slider").mousemove(function(e){
 
