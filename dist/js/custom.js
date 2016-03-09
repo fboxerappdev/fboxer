@@ -102,7 +102,7 @@
 				runcode();
 				setTimeout(function(){
 					runcode();
-				}, 300);
+				}, 600);
 			});
 
 			//runcode();
