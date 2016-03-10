@@ -675,6 +675,9 @@ header{
     margin:60px auto 0;
   }
 }
+
+
+
 .why-choose{
   background: #5a5a5a url("../images/why-choose.jpg") no-repeat scroll 0 0 / cover ;
   clear: both;
@@ -691,6 +694,7 @@ header{
     margin: 10px 0 30px;
   }
   img{
+    display: inline-block;
     margin: 20px 0 5px;
     width: 72px;
   }
@@ -707,23 +711,36 @@ header{
   }
 }
 
-.choose-btns{
+
+.why-choose .bx-wrapper .bx-pager {
+  bottom: -60px;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.why-choose .bx-wrapper .bx-pager a {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  color: #fff;
   display: inline-block;
-  margin: 19px 0;
-  a{
-    border: 1px solid #aaa;
-    border-radius: 4px;
-    color: #fff;
-    display: inline-block;
-    font-size: 16px;
-    margin: 0 13px;
-    &:extend(.transition);
-    padding: 6px 15px;
-    &:hover{
-      background-color: rgba(44, 189, 228, 0.2);
-    }
+  font-size: 16px;
+  margin: 0 10px;
+  &:extend(.transition);
+  padding: 6px 15px;
+  &:hover{
+    background-color: rgba(44, 189, 228, 0.2);
   }
 }
+
+.why-choose .bx-wrapper .bx-pager a:hover,
+.why-choose .bx-wrapper .bx-pager a.active {
+  background: rgba(44, 189, 228, 0.4) none repeat scroll 0 0;;
+}
+
+.why-choose .bx-wrapper {
+  margin-bottom: 120px;
+}
+
 
 
 .our-clients{
@@ -759,8 +776,6 @@ footer{
   position: fixed;
   width: 100%;
   z-index: -1;
-
-
   .footer{
     float: left;
     padding: 60px 0;

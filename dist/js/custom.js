@@ -12,6 +12,24 @@
 				pager:false
 			});
 
+			$('.choose-us').bxSlider({
+				auto: false,
+				autoControls: false,
+				pager:true,
+
+				buildPager: function(slideIndex){
+					switch(slideIndex){
+						case 0:
+							return '<div>We are good listener</div>';
+						case 1:
+							return '<div>We are creativer</div>';
+						case 2:
+							return '<div>We deliver on time</div>';
+					}
+				}
+			});
+
+
 
 			function myscrool(){
 				if(topval>0)
@@ -102,7 +120,10 @@
 				runcode();
 				setTimeout(function(){
 					runcode();
-				}, 600);
+				}, 400);
+				setTimeout(function(){
+					runcode();
+				}, 900);
 			});
 
 			//runcode();
@@ -162,5 +183,7 @@
 
 
 			var footerheight = $("footer").height();
-			$("<div></div>").insertBefore('footer').css("height",footerheight);
+			$("<div></div>").insertBefore('footer').css("margin-bottom",footerheight);
+
+
 		});

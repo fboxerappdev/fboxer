@@ -22,7 +22,7 @@ body {
 header,
 .portfolio .portfolio-item .portfolio-item-content::before,
 .portfolio .portfolio-item .portfolio-item-content img,
-.choose-btns a {
+.why-choose .bx-wrapper .bx-pager a {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
@@ -666,6 +666,7 @@ header .btn-nav.active span:after {
   margin: 10px 0 30px;
 }
 .why-choose img {
+  display: inline-block;
   margin: 20px 0 5px;
   width: 72px;
 }
@@ -680,21 +681,29 @@ header .btn-nav.active span:after {
   margin: 20px auto 30px;
   max-width: 660px;
 }
-.choose-btns {
-  display: inline-block;
-  margin: 19px 0;
+.why-choose .bx-wrapper .bx-pager {
+  bottom: -60px;
+  text-align: center !important;
+  width: 100% !important;
 }
-.choose-btns a {
+.why-choose .bx-wrapper .bx-pager a {
   border: 1px solid #aaa;
   border-radius: 4px;
   color: #fff;
   display: inline-block;
   font-size: 16px;
-  margin: 0 13px;
+  margin: 0 10px;
   padding: 6px 15px;
 }
-.choose-btns a:hover {
+.why-choose .bx-wrapper .bx-pager a:hover {
   background-color: rgba(44, 189, 228, 0.2);
+}
+.why-choose .bx-wrapper .bx-pager a:hover,
+.why-choose .bx-wrapper .bx-pager a.active {
+  background: rgba(44, 189, 228, 0.4) none repeat scroll 0 0;
+}
+.why-choose .bx-wrapper {
+  margin-bottom: 120px;
 }
 .our-clients {
   background: #fff none repeat scroll 0 0;
