@@ -65,7 +65,9 @@
 				var imgheight;
 
 				if($(".imgs").length){
+					
 					imgheight = $(".imgs").height();
+						
 				}
 				else{
 					imgheight = winheight;
@@ -120,10 +122,10 @@
 				runcode();
 				setTimeout(function(){
 					runcode();
-				}, 400);
+				}, 300);
 				setTimeout(function(){
 					runcode();
-				}, 900);
+				}, 1000);
 			});
 
 			//runcode();
