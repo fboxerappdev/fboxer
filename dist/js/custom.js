@@ -119,6 +119,7 @@
 			}
 
 			$(".imgs").ready(function(){
+				runcode();
 				setTimeout(function(){
 					runcode();
 				}, 100);
