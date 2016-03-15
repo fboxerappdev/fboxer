@@ -118,23 +118,13 @@
 				}
 			}
 
-			$(".imgs").ready(function(){
 
-				setTimeout(function(){
-					runcode();
-				}, 100);
-				setTimeout(function(){
-					runcode();
-				}, 200);
-				setTimeout(function(){
-					runcode();
-				}, 400);
-				setTimeout(function(){
-					runcode();
-				}, 1000);
-			});
+			var theImage = new Image();
+			theImage.src = $(".imgs").attr("src");
+			theImage.onload = function() {
+				runcode();
+			};
 
-			//runcode();
 
 			$(".portfolio-slider").mousemove(function(e){
 
