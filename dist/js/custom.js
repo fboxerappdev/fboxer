@@ -29,6 +29,8 @@
 				}
 			});
 
+
+
 			function myscrool(){
 				if(topval>0)
 				{
@@ -116,12 +118,14 @@
 				}
 			}
 
-			runcode();
-			var inter = setInterval(runcode(), 100);
-			$(document).on("load",function(){
-				clearInterval(myVar);
+			$(".imgs").ready(function(){
+				runcode();
+				var inter = setInterval(runcode(), 100);
 			});
-
+			$(document).on("load",function(){
+				clearInterval(inter);
+			});
+			//runcode();
 
 			$(".portfolio-slider").mousemove(function(e){
 
