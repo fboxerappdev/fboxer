@@ -121,10 +121,16 @@
 			$(".imgs").ready(function(){
 				setTimeout(function(){
 					runcode();
-				}, 4000);
+				}, 100);
 				setTimeout(function(){
 					runcode();
-				}, 8000);
+				}, 200);
+				setTimeout(function(){
+					runcode();
+				}, 400);
+				setTimeout(function(){
+					runcode();
+				}, 1000);
 			});
 
 			//runcode();
