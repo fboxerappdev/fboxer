@@ -29,8 +29,6 @@
 				}
 			});
 
-
-
 			function myscrool(){
 				if(topval>0)
 				{
@@ -119,10 +117,8 @@
 			}
 
 			runcode();
-			var inter = setInterval(
-				runcode()
-			, 100);
-			$(document).load(function(){
+			var inter = setInterval(runcode(), 100);
+			$(document).on("load",function(){
 				clearInterval(myVar);
 			});
 
