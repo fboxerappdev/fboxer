@@ -65,9 +65,9 @@
 				var imgheight;
 
 				if($(".imgs").length){
-					
+
 					imgheight = $(".imgs").height();
-						
+
 				}
 				else{
 					imgheight = winheight;
@@ -119,12 +119,14 @@
 			}
 
 			$(".imgs").ready(function(){
-				runcode();
-				var inter = setInterval(runcode(), 100);
+				setTimeout(function(){
+					runcode();
+				}, 4000);
+				setTimeout(function(){
+					runcode();
+				}, 8000);
 			});
-			$(document).on("load",function(){
-				clearInterval(inter);
-			});
+
 			//runcode();
 
 			$(".portfolio-slider").mousemove(function(e){
