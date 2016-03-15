@@ -22,7 +22,8 @@ body {
 header,
 .portfolio .portfolio-item .portfolio-item-content::before,
 .portfolio .portfolio-item .portfolio-item-content img,
-.why-choose .bx-wrapper .bx-pager a {
+.why-choose .bx-wrapper .bx-pager a,
+.services-list .services-item img {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
@@ -590,6 +591,10 @@ header .btn-nav.active span:after {
   top: 0;
   width: 100%;
 }
+.full-wind {
+  width: 100%;
+  padding: 0 50px;
+}
 .page-header-content {
   align-self: center;
   margin: 0 auto;
@@ -607,6 +612,22 @@ header .btn-nav.active span:after {
   font-size: 56px;
   font-weight: 400;
   margin: 8px 0;
+}
+.page-header-content .head-3 {
+  color: #fff;
+  font-size: 63px;
+  font-weight: 500;
+  margin: 0;
+}
+.page-header-content span {
+  color: #fff;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+.page-header-content p {
+  color: #c5c5c5;
+  font-size: 37px;
 }
 .page-header-content ul {
   display: inline-block;
@@ -730,6 +751,79 @@ header .btn-nav.active span:after {
 }
 .our-clients ul li img {
   max-width: 100%;
+}
+.services-list {
+  float: left;
+  margin: 0 -12px;
+}
+.services-list .services-item {
+  float: left;
+  overflow: hidden;
+  padding: 12px;
+  position: relative;
+  width: 33%;
+}
+.services-list .services-item:before {
+  background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+  bottom: 12px;
+  content: "";
+  left: 12px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  z-index: 2;
+}
+.services-list .services-item img {
+  width: 100%;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.services-list .services-item:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.services-list .services-item span {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 500;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50px;
+  z-index: 3;
+}
+.gray-box {
+  background: #eeebeb none repeat scroll 0 0;
+  clear: both;
+  padding: 20px 0;
+  position: relative;
+  text-align: center;
+}
+.blk-hd {
+  font-family: Avenir LT Std,arial;
+  font-size: 40px;
+}
+.simple-pg {
+  color: #000000;
+  font-family: Avenir LT Std,arial;
+  font-size: 22px;
+  margin: 15px auto;
+  max-width: 880px;
+}
+.ser-detail-item {
+  background: #f2f2f2 none repeat scroll 0 0;
+  height: 720px;
+  overflow: hidden;
+}
+.ser-detail-item img {
+  width: 100%;
 }
 footer {
   background: #fff none repeat scroll 0 0;

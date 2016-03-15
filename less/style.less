@@ -615,6 +615,10 @@ header{
   top: 0;
   width: 100%;
 }
+.full-wind{
+  width:100%;
+  padding:0 50px;
+}
 .page-header-content{
   align-self: center;
   margin: 0 auto;
@@ -631,6 +635,22 @@ header{
       font-weight: 400;
       margin: 8px 0;
     }
+  }
+  .head-3{
+    color: #fff;
+    font-size: 63px;
+    font-weight: 500;
+    margin: 0;
+  }
+  span{
+    color: #fff;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  p{
+    color: #c5c5c5;
+    font-size: 37px;
   }
   ul{
     display: inline-block;
@@ -769,6 +789,84 @@ header{
     }
   }
 }
+.services-list{
+  float: left;
+  margin: 0 -12px;
+  .services-item{
+    float: left;
+    overflow: hidden;
+    padding: 12px;
+    position: relative;
+    width: 33%;
+
+    &:before{
+      background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+      bottom: 12px;
+      content: "";
+      left: 12px;
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      z-index: 2;
+    }
+    img{
+      width:100%;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform:  scale(1);
+      transform: scale(1);
+      &:extend(.transition);
+    }
+    &:hover img{
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform:  scale(1.1);
+      transform: scale(1.1);
+    }
+    span{
+      color: #fff;
+      font-size: 36px;
+      font-weight: 500;
+      left: 0;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 50px;
+      z-index: 3;
+    }
+  }
+}
+.gray-box{
+  background: #eeebeb none repeat scroll 0 0;
+  clear: both;
+  padding: 20px 0;
+  position: relative;
+  text-align: center;
+}
+.blk-hd{
+  font-family: Avenir LT Std,arial;
+  font-size: 40px;
+}
+.simple-pg{
+  color: #000000;
+  font-family: Avenir LT Std,arial;
+  font-size: 22px;
+  margin: 15px auto;
+  max-width: 880px;
+}
+.ser-detail-item{
+  background: #f2f2f2 none repeat scroll 0 0;
+  height: 720px;
+  overflow: hidden;
+   img{
+     width:100%;
+   }
+}
+
+
+
 
 footer{
   background: #fff none repeat scroll 0 0;
