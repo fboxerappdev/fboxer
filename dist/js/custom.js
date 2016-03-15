@@ -118,17 +118,14 @@
 				}
 			}
 
-			$(".imgs").ready(function(){
-				runcode();
-				setTimeout(function(){
-					runcode();
-				}, 300);
-				setTimeout(function(){
-					runcode();
-				}, 1000);
+			runcode();
+			var inter = setInterval(
+				runcode()
+			, 100);
+			$(document).load(function(){
+				clearInterval(myVar);
 			});
 
-			//runcode();
 
 			$(".portfolio-slider").mousemove(function(e){
 
