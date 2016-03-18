@@ -24,7 +24,8 @@ header,
 .portfolio .portfolio-item .portfolio-item-content img,
 .why-choose .bx-wrapper .bx-pager a,
 .services-list .services-item img,
-.casestudies a {
+.casestudies a,
+.cs-imglist a {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
@@ -917,7 +918,8 @@ header .btn-nav.active span:after {
   margin: 0 auto 40px;
   max-width: 750px;
 }
-.casestudies a {
+.casestudies a,
+.cs-imglist a {
   border: 2px solid;
   color: #00C0E5;
   font-size: 17px;
@@ -969,11 +971,22 @@ header .btn-nav.active span:after {
   width: 100%;
 }
 .cs-info div {
-  max-width: 1500px;
-  padding: 60px 0;
-  width: 100%;
-  margin: 0 auto;
   display: table;
+  margin: 0 auto;
+  max-width: 1520px;
+  padding: 60px 20px;
+  position: relative;
+  width: 100%;
+}
+.cs-info div:before {
+  background: transparent none repeat scroll 0 0;
+  border-color: #eaeceb transparent;
+  border-style: solid solid none;
+  border-width: 30px 40px;
+  content: "";
+  margin-left: -30px;
+  position: absolute;
+  top: 100%;
 }
 .cs-info div h3 {
   color: #131313;
@@ -987,8 +1000,38 @@ header .btn-nav.active span:after {
   font-size: 18px;
   margin-bottom: 20px;
 }
+.cs-info div h4 {
+  color: #a4440f;
+  font-size: 30px;
+}
+.cs-info div span {
+  color: #383635;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 11px 0;
+}
+.cs-info div h6 {
+  font-size: 33px;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 38px;
+}
 .cs-info img {
   width: 100%;
+}
+.cs-imglist {
+  margin-top: 140px;
+  padding: 40px 0;
+  text-align: center;
+}
+.cs-imglist img {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.cs-imglist a {
+  display: inline-block;
+  margin-top: 30px;
 }
 footer {
   background: #fff none repeat scroll 0 0;
