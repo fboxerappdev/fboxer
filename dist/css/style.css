@@ -9,7 +9,8 @@ body {
   font-family: Brandon Grotesque;
 }
 .block,
-.page-content {
+.page-content,
+.serv-page .serv-item {
   float: left;
   width: 100%;
 }
@@ -1020,19 +1021,6 @@ header .btn-nav.active span:after {
 .cs-info img {
   width: 100%;
 }
-.cs-imglist {
-  margin-top: 140px;
-  padding: 40px 0;
-  text-align: center;
-}
-.cs-imglist img {
-  margin-bottom: 30px;
-  width: 100%;
-}
-.cs-imglist a {
-  display: inline-block;
-  margin-top: 30px;
-}
 footer {
   background: #fff none repeat scroll 0 0;
   bottom: 0;
@@ -1076,4 +1064,100 @@ footer .footer ul li span:hover {
 }
 footer .footer ul li span {
   margin-top: 3px;
+}
+.cs-imglist {
+  background: #00c0e5 none repeat scroll 0 0;
+  margin-top: 64px;
+  padding: 110px 0 20px;
+  text-align: center;
+}
+.cs-imglist .cs-stage {
+  margin: 0 auto;
+  max-width: 1700px;
+  padding-bottom: 50px;
+  perspective: 810px;
+  width: 100%;
+}
+.cs-imglist .cs-stage .chl {
+  backface-visibility: hidden;
+  background: #fff none repeat scroll 0 0;
+  display: inline-block;
+  margin: 0 -2px;
+  padding: 18px;
+  width: 541px;
+}
+.cs-imglist .cs-stage .chl.animateblock {
+  transition: all 0s ease 0s;
+}
+.cs-imglist .cs-stage .chl img {
+  width: 100%;
+}
+.cs-imglist a {
+  color: #fff;
+  display: inline-block;
+  margin: 30px 0 48px;
+}
+.serv-page {
+  display: table;
+  margin: -60px auto;
+  max-width: 1920px;
+  width: 100%;
+}
+.serv-page .serv-item {
+  border-bottom: 2px solid #e9e9e9;
+  display: flex;
+  padding: 20px 0;
+}
+.serv-page .serv-item:last-child {
+  border-bottom: 0 none;
+}
+.serv-page .serv-item:nth-child(2n) .serv-item-info div {
+  max-width: 590px;
+  width: 100%;
+  float: right;
+}
+.serv-page .serv-item:nth-child(2n) .serv-item-img img {
+  position: absolute;
+  left: 60px;
+  right: inherit;
+}
+.serv-page .serv-item .serv-item-img {
+  align-self: center;
+  float: left;
+  height: 630px;
+  padding: 0;
+  position: relative;
+  width: 50%;
+}
+.serv-page .serv-item .serv-item-img img {
+  position: absolute;
+  right: 60px;
+}
+.serv-page .serv-item .serv-item-info {
+  align-self: center;
+  float: left;
+  padding: 0 30px;
+  width: 50%;
+}
+.serv-page .serv-item .serv-item-info div {
+  max-width: 590px;
+  width: 100%;
+  float: left;
+}
+.serv-page .serv-item .serv-item-info div h3 {
+  color: #202020;
+  font-size: 43px;
+  font-weight: 500;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+}
+.serv-page .serv-item .serv-item-info div h3 b {
+  font-weight: 600;
+}
+.serv-page .serv-item .serv-item-info div p {
+  color: #7c7c7c;
+  font-family: arial;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 15px 0;
 }

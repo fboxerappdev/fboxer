@@ -4,6 +4,8 @@
 
 			$("body").show();
 
+			$("body").cssAnimate();
+
 			var winwid = window.innerWidth;
 
 			$('.bxslider').bxSlider({

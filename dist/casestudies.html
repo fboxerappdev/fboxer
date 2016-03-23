@@ -19,6 +19,9 @@
     <link href="css/jquery.bxslider.css" rel="stylesheet" />
 
     <!-- animate -->
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- animate -->
 
     <link href="css/style.css" rel="stylesheet" type="text/css">
 
@@ -33,7 +36,6 @@
     <![endif]-->
 </head>
 <body>
-
     <div class="slider-area">
         <div class="main-slider">
             <header>
@@ -138,22 +140,18 @@
             </div>
         </div>
         <div class="cs-imglist">
+            <div class="cs-stage">
+                 <div class="chl animateblock" data-animate-class="flipBackRt">
+                    <img src="images/cs/img3.png">
+                 </div>
+                 <div class="chl">
+                     <img src="images/cs/img1.png">
+                 </div>
+                 <div class="chl animateblock" data-animate-class="flipBackLt">
+                     <img src="images/cs/img2.png">
+                 </div>
+            </div>
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="images/cs/img1.jpg">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="images/cs/img2.jpg">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="images/cs/img3.jpg">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="images/cs/img4.jpg">
-                    </div>
-
-                </div>
                 <div class="row">
                     <a href="#">Visit Site</a>
                 </div>
@@ -204,6 +202,10 @@
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
+
+
+    <!-- custom Javascript file -->
+    <script src="js/plugin.js"></script>
 
     <!-- bxSlider Javascript file -->
     <script src="js/jquery.bxslider.min.js"></script>

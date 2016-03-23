@@ -1069,20 +1069,7 @@ header{
     width:100%;
   }
 }
-.cs-imglist{
-  margin-top: 140px;
-  padding: 40px 0;
-  text-align: center;
-  img{
-    margin-bottom: 30px;
-    width: 100%;
-  }
-  a{
-    &:extend(.casestudies a);
-    display: inline-block;
-    margin-top: 30px;
-  }
-}
+
 
 
 
@@ -1134,6 +1121,134 @@ footer{
     }
   }
 }
+
+
+
+.cs-imglist{
+  background: #00c0e5 none repeat scroll 0 0;
+  margin-top: 64px;
+  padding: 110px 0 20px;
+  text-align: center;
+  .cs-stage{
+    margin: 0 auto;
+    max-width: 1700px;
+    padding-bottom: 50px;
+    perspective: 810px;
+    width: 100%;
+    .chl{
+      backface-visibility: hidden;
+      background: #fff none repeat scroll 0 0;
+      display: inline-block;
+      margin: 0 -2px;
+      padding: 18px;
+      width: 541px;
+      &.animateblock {
+        transition: all 0s ease 0s;
+      }
+      img{
+        width:100%;
+      }
+    }
+  }
+  a{
+    &:extend(.casestudies a);
+    color: #fff;
+    display: inline-block;
+    margin: 30px 0 48px;
+  }
+}
+.serv-page{
+  display: table;
+  margin: -60px auto;
+  max-width: 1920px;
+  width: 100%;
+  .serv-item{
+    border-bottom: 2px solid #e9e9e9;
+    display: flex;
+    padding: 20px 0;
+    &:last-child{
+      border-bottom:0 none;
+    }
+    &:nth-child(2n){
+     .serv-item-info{
+       div{
+         max-width: 590px;
+         width: 100%;
+         float:right;
+       }
+     }
+      .serv-item-img{
+        img{
+          position: absolute;
+          left: 60px;
+          right:inherit;
+        }
+      }
+    }
+    &:extend(.block);
+    .serv-item-img{
+      align-self: center;
+      float: left;
+      height: 630px;
+      padding: 0;
+      position: relative;
+      width: 50%;
+      img{
+        position: absolute;
+        right: 60px;
+      }
+    }
+    .serv-item-info{
+      align-self: center;
+      float: left;
+      padding: 0 30px;
+      width: 50%;
+      div{
+        max-width: 590px;
+        width: 100%;
+        float:left;
+        h3{
+          color: #202020;
+          font-size: 43px;
+          font-weight: 500;
+          margin: 0 0 6px;
+          text-transform: uppercase;
+         b{
+           font-weight: 600;
+         }
+        }
+        p{
+          color: #7c7c7c;
+          font-family: arial;
+          font-size: 18px;
+          line-height: 1.6;
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
