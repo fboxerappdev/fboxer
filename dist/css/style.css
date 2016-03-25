@@ -10,7 +10,8 @@ body {
 }
 .block,
 .page-content,
-.serv-page .serv-item {
+.serv-page .serv-item,
+.careers .careers-body {
   float: left;
   width: 100%;
 }
@@ -1160,4 +1161,140 @@ footer .footer ul li span {
   font-size: 18px;
   line-height: 1.6;
   margin: 15px 0;
+}
+.contact-full {
+  background: #fff url("../images/contact2.png") no-repeat scroll center 0;
+}
+.contact-full .contact {
+  text-align: center;
+}
+.contact-full .contact span {
+  color: #1e769a;
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.contact-full .contact h3 {
+  font-size: 48px;
+  font-weight: 400;
+  margin: 18px 0;
+}
+.contact-full .contact ul {
+  display: inline-flex;
+  margin: 65px 0;
+  padding: 0 12px;
+  text-align: center;
+}
+.contact-full .contact ul li {
+  align-self: start;
+  color: #000;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 500;
+  max-width: 433px;
+  min-width: 320px;
+  padding: 10px 31px;
+}
+.contact-full .contact ul li i {
+  clear: both;
+  color: #2cbde4;
+  display: list-item;
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+.contact-full .contact .form {
+  display: inline-block;
+  max-width: 1040px;
+  width: 100%;
+}
+.contact-full .contact .form input {
+  border-radius: 0;
+  box-shadow: 0 0 0;
+  font-family: arial;
+  font-size: 15px;
+  height: 46px;
+  margin-bottom: 28px;
+}
+.contact-full .contact .form textarea {
+  border-radius: 0;
+  height: 194px;
+  font-family: arial;
+  font-size: 15px;
+}
+.contact-full .contact .form button {
+  background: #2cbde4 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 0;
+  color: #fff;
+  float: right;
+  font-size: 21px;
+  font-weight: 500;
+  padding: 7px 40px;
+}
+.contact-full .contact .form button:hover {
+  background: #1aabd2 none repeat scroll 0 0;
+}
+.two-box {
+  padding: 0;
+}
+.two-box .two-box-item {
+  height: 500px;
+}
+.two-box .two-box-item.red {
+  background: #F44E64 none repeat scroll 0 0;
+}
+.two-box .two-box-item.blue {
+  background: #0082CA none repeat scroll 0 0;
+}
+.padding0 {
+  padding: 0;
+}
+.careers {
+  position: relative;
+}
+.careers .careers-head {
+  background: #fff none repeat scroll 0 0;
+  border-bottom: 1px solid #dfdfdf;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.careers .careers-head span {
+  display: inline-block;
+  font-size: 23px;
+  font-weight: 500;
+  padding: 12px 42px;
+  cursor: pointer;
+}
+.careers .careers-head span.active {
+  box-shadow: 0 -1px 0 #2CBDE4 inset;
+}
+.careers .careers-body {
+  padding-top: 100px;
+}
+.careers .careers-body .careers-body-item {
+  border-bottom: 1px solid #aacaca;
+  margin-bottom: 42px;
+  min-height: 600px;
+  padding: 40px 0;
+}
+.careers .careers-body .careers-body-item h3.left-h3l {
+  font-size: 36px;
+  font-weight: 500;
+}
+.careers .careers-body .careers-body-item p {
+  color: #6b6b6b;
+  font-family: arial;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+.careers .careers-body .careers-body-item p b {
+  color: #333;
+}
+.careers .careers-body .careers-body-item img {
+  width: 100%;
 }

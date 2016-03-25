@@ -110,6 +110,47 @@
 				}
 			}
 
+
+			function stopSubNav(imgheight){
+
+				var cr = $(".careers-head").height();
+
+				imgheight -= cr;
+
+				function stopNav(){
+					if ($(this).scrollTop() > imgheight) {
+						$(".careers-head").css({
+							position:"fixed",
+							top:"70px",
+						});
+					} else {
+						$(".careers-head").css({
+							position:"absolute",
+							top:0,
+						});
+					}
+				}
+
+
+
+				$(window).scroll(function(){
+					stopNav();
+				});
+				stopNav();
+
+
+				$('.careers-head span').on("click",function(){
+
+					var index = $(this).index();
+					var topposition = $(".careers-body>div:eq('"+index+"')").offset().top;
+					topposition -= 130;
+					$('html, body').animate({scrollTop : topposition},500);
+					return false;
+				});
+			}
+
+
+
 			var imgheight;
 
 			if($(".imgs").length){
@@ -118,12 +159,17 @@
 				theImage.onload = function() {
 					imgheight = $(".imgs").height();
 					runcode(imgheight);
+					stopSubNav(imgheight);
 				};
 			}
 			else{
 				imgheight = winheight;
 				runcode(imgheight);
+				stopSubNav(imgheight);
 			}
+
+
+
 
 
 

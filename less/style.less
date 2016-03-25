@@ -1228,10 +1228,145 @@ footer{
     }
   }
 }
+.contact-full{
+  background: #fff url("../images/contact2.png") no-repeat scroll center 0;
+  .contact{
+    text-align: center;
+    span{
+      color: #1e769a;
+      font-size: 18px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+    h3{
+      font-size: 48px;
+      font-weight: 400;
+      margin: 18px 0;
+    }
+    ul{
+      display: inline-flex;
+      margin: 65px 0;
+      padding: 0 12px;
+      text-align: center;
+      li{
+        align-self: start;
+        color: #000;
+        display: inline-block;
+        font-size: 22px;
+        font-weight: 500;
+        max-width: 433px;
+        min-width: 320px;
+        padding: 10px 31px;
+        i{
+          clear: both;
+          color: #2cbde4;
+          display: list-item;
+          font-size: 34px;
+          margin-bottom: 12px;
+        }
+      }
+    }
+    .form{
+      display: inline-block;
+      max-width: 1040px;
+      width: 100%;
+      input{
+        border-radius: 0;
+        box-shadow: 0 0 0;
+        font-family: arial;
+        font-size: 15px;
+        height: 46px;
+        margin-bottom: 28px;
+      }
+      textarea{
+        border-radius: 0;
+        height: 194px;
+        font-family: arial;
+        font-size: 15px;
+      }
+      button{
+        background: #2cbde4 none repeat scroll 0 0;
+        border: medium none;
+        border-radius: 0;
+        color: #fff;
+        float: right;
+        font-size: 21px;
+        font-weight: 500;
+        padding: 7px 40px;
+        &:hover{
+          background:#1aabd2 none repeat scroll 0 0;
+        }
+      }
+    }
+  }
+}
+.two-box{
+  padding: 0;
+  .two-box-item{
+    height: 500px;
+    &.red{
+      background: #F44E64 none repeat scroll 0 0;
+    }
+    &.blue{
+      background: #0082CA none repeat scroll 0 0;
+    }
+  }
+}
 
+.padding0{
+  padding:0;
+}
 
-
-
+.careers{
+  position:relative;
+  .careers-head{
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #dfdfdf;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    span{
+      display: inline-block;
+      font-size: 23px;
+      font-weight: 500;
+      padding: 12px 42px;
+      cursor: pointer;
+      &.active{
+        box-shadow: 0 -1px 0 #2CBDE4 inset;
+      }
+    }
+  }
+  .careers-body{
+    padding-top: 100px;
+    &:extend(.block);
+    .careers-body-item{
+      border-bottom: 1px solid #aacaca;
+      margin-bottom: 42px;
+      min-height: 600px;
+      padding: 40px 0;
+      h3.left-h3l{
+        font-size: 36px;
+        font-weight: 500;
+      }
+      p{
+        color: #6b6b6b;
+        font-family: arial;
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+        b{
+          color:#333;
+        }
+      }
+      img{
+        width:100%;
+      }
+    }
+  }
+}
 
 
 
