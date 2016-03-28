@@ -121,7 +121,7 @@
 					if ($(this).scrollTop() > imgheight) {
 						$(".careers-head").css({
 							position:"fixed",
-							top:"70px",
+							top:"68px",
 						});
 					} else {
 						$(".careers-head").css({
@@ -143,7 +143,7 @@
 
 					var index = $(this).index();
 					var topposition = $(".careers-body>div:eq('"+index+"')").offset().top;
-					topposition -= 130;
+					topposition -= 124;
 					$('html, body').animate({scrollTop : topposition},500);
 					return false;
 				});
@@ -216,7 +216,7 @@
 
 
 			function shownav(options , element){
-				if ($(window).scrollTop() > options ) {
+				if ($(window).scrollTop() > 2 ) { //options
 					element.addClass("colored");
 				} else {
 					element.removeClass("colored");
@@ -232,5 +232,14 @@
 			var footerheight = $("footer").height();
 			$("<div></div>").insertBefore('footer').css("margin-bottom",footerheight);
 
+			if($(".openings").length){
+				$('.open-left a').on("click",function(){
+					$('.open-left a').removeClass();
+					$(this).addClass("active");
+					var index = $(this).index();
+					$(".open-right>div").hide();
+					$(".open-right>div:eq('"+index+"')").fadeIn();
+				});
+			}
 
 		});
