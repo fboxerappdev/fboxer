@@ -1121,7 +1121,7 @@ footer .footer ul li span {
   position: absolute;
   right: -469px;
   top: -289px;
-  transform: rotate(-25deg) rotateX(9deg) skewX(30deg);
+  transform: rotate(-25deg) rotateX(22deg) skewX(30deg) translate(0, 0px);
   width: 1100px;
 }
 .proget-pic .pic-item .rotate-box:before {

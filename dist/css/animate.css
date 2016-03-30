@@ -37,6 +37,16 @@
 
 
 
+.animateblock.aniRight {
+    -webkit-animation-name: aniRight;
+    -moz-animation-name: aniRight;
+    -o-animation-name: aniRight;
+    animation-name: aniRight;
+    animation-duration: 2s;
+ }
+
+
+
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes flipBackRt {
@@ -57,6 +67,11 @@
     }
 }
 
+
+
+
+
+
 /* Chrome, Safari, Opera */
 @-webkit-keyframes flipBackLt {
     from {
@@ -73,6 +88,26 @@
     }
     to {
         transform: rotateY(10deg);
+    }
+}
+
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes aniRight {
+    from {
+        transform: rotate(-25deg) rotateX(22deg) skewX(30deg) translate(90%, 0px);
+    }
+    to {
+        transform: rotate(-25deg) rotateX(22deg) skewX(30deg) translate(0, 0px);
+    }
+}
+
+@keyframes aniRight {
+    from {
+        transform: rotate(-25deg) rotateX(22deg) skewX(30deg) translate(90%, 0px);
+    }
+    to {
+        transform: rotate(-25deg) rotateX(22deg) skewX(30deg) translate(0, 0px);
     }
 }
 
