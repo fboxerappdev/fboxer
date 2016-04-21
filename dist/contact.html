@@ -50,7 +50,7 @@
                     <li>
                         <a href="index.html">Home</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="about.html">About</a>
                     </li>
                     <li>
@@ -65,7 +65,7 @@
                     <li>
                         <a href="portfolio.html">Portfolio</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="contact.html">Contact</a>
                     </li>
                 </ul>
@@ -78,7 +78,7 @@
                 </div>
 
             </div>
-            <img class="imgs" src="images/contact.jpg"/>
+            <img class="imgs" src="images/about.jpg"/>
             <div class="page-header-info">
                 <div class="page-header-content">
                     <h2>
@@ -125,66 +125,106 @@
 
         </div>
     </div>
-    <div class="page-content contact-full">
+    <div class="page-content">
         <div class="container">
             <div class="row">
-                <div class="contact">
-                    <span>Say Hello!</span>
-                    <h3>We would love to hear from you.</h3>
-                    <ul>
-                        <li><i class="fa fa-phone"></i> +91 991 401 5454 </li>
-                        <li><i class="fa fa-map-marker"></i>Fboxer Tower C, Third Floor DLF Building, IT Park Chandigarh, India, 160101 </li>
-                        <li><i class="fa fa-envelope"></i>info@fboxer.com </li>
-                    </ul>
-                    <div class="form">
-                       <form>
-                           <div class="col-md-6">
-                               <div class="form-group">
-                                   <input type="text" class="form-control"  placeholder="Name">
-                               </div>
-                               <div class="form-group">
-                                   <input type="email" class="form-control" placeholder="Email">
-                               </div>
-                               <div class="form-group">
-                                   <input type="text" class="form-control" placeholder="Phone">
-                               </div>
-                           </div>
-                           <div class="col-md-6">
-                               <textarea class="form-control" placeholder="Textarea" rows="3"></textarea>
-                           </div>
-                           <div class="col-md-12">
-                                <button type="submit" class="btn btn-default">Submit</button>
-                           </div>
-                       </form>
-                    </div>
+                <div class="contact-info">
+                    <img src="images/wd-line.png">
+                    <span>READY TO GET STARTED?</span>
+                    <h3>Let's build something great together !</h3>
+                    <h4>To get started, fill out this form below.</h4>
+                    <p>All great things start out with a plan, so we like to ask as many questions as possible to get an idea fo your project, project goals, likes and dislikes, timeline, and budget. fill out this form and a Primo representative will get in touch with you right away</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="page-content two-box">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6">
+    <div class="page-content contact-form">
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <label for="fname">Your Name *</label>
                     <div class="row">
-                        <div class="two-box-item red">
-
-
+                        <div class="col-md-6">
+                            <input id="fname" type="text" class="form-control" />
+                            <span>First</span>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" />
+                            <span>Last</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="two-box-item blue">
-
-
+                <div class="row">
+                    <div class="form-group col-xs-6">
+                        <label for="email">Your Email Address *</label>
+                        <input id="email" type="email" class="form-control" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group  col-xs-6">
+                        <label for="Phone">Phone Number *</label>
+                        <input id="Phone" type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group  col-xs-6">
+                        <label>Phone Number *</label>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Website Design
+                            </label>
+                            <label>
+                                <input type="checkbox"> E-commerce Website
+                            </label>
+                            <label>
+                                <input type="checkbox"> Graphic Design
+                            </label>
+                            <label>
+                                <input type="checkbox"> Logo Design
+                            </label>
+                            <label>
+                                <input type="checkbox"> Digital Advertising
+                            </label>
+                            <label>
+                                <input type="checkbox"> Search Engine Optimization
+                            </label>
+                            <label>
+                                <input type="checkbox"> Others
+                            </label>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="form-group  col-xs-6">
+                        <label for="Budget">Project Budget *</label>
+                        <select id="Budget" class="form-control">
+                            <option>$5,500 - $10,000</option>
+                            <option>$15,500 - $10,000</option>
+                            <option>$25,500 - $30,000</option>
+                            <option>$35,500 - $40,000</option>
+                            <option>$45,500 - $50,000</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group  col-xs-12">
+                        <label for="proinfo">Brief Description of your project</label>
+                        <textarea class="form-control" id="proinfo"></textarea>
+                    </div>
+                    <div class="form-group  col-xs-12">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+
         </div>
     </div>
-    <div class="testimonial">
 
+    <div class="work-flow">
+        <img src="images/wd-line.png">
+        <h4>LET'S WORK TOGETHER</h4>
+        <p>Have a project or design need in mind? Were her eto help. Contact us for a free consultation and guidance on the best way to tell your story. Thats what we do best.</p>
+        <a href="#">Get Started</a>
     </div>
     <footer>
         <div class="container">
