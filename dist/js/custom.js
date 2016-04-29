@@ -111,46 +111,6 @@
 			}
 
 
-			function stopSubNav(imgheight){
-
-				var cr = $(".careers-head").height();
-
-				imgheight -= cr;
-
-				function stopNav(){
-					if ($(this).scrollTop() > imgheight) {
-						$(".careers-head").css({
-							position:"fixed",
-							top:"68px",
-						});
-					} else {
-						$(".careers-head").css({
-							position:"absolute",
-							top:0,
-						});
-					}
-				}
-
-
-
-				$(window).scroll(function(){
-					stopNav();
-				});
-				stopNav();
-
-
-				$('.careers-head span').on("click",function(){
-
-					var index = $(this).index();
-					var topposition = $(".careers-body>div:eq('"+index+"')").offset().top;
-					topposition -= 124;
-					$('html, body').animate({scrollTop : topposition},500);
-					return false;
-				});
-			}
-
-
-
 			var imgheight;
 
 			if($(".imgs").length){
@@ -159,13 +119,11 @@
 				theImage.onload = function() {
 					imgheight = $(".imgs").height();
 					runcode(imgheight);
-					stopSubNav(imgheight);
 				};
 			}
 			else{
 				imgheight = winheight;
 				runcode(imgheight);
-				stopSubNav(imgheight);
 			}
 
 
@@ -202,9 +160,27 @@
 			});
 
 
-			$(".js-open-nav").click(function(){
-				$(this).toggleClass("active");
+			$(".toggle-btn").click(function(){
 				$(".menu-bar").toggleClass("active1");
+
+                var status = $(".toggle-btn span").text();
+
+                if(status == "close"){
+                    $(this).find("i").removeClass("fa-times");
+                    $(this).find("i").addClass("fa-bars");
+                    $(this).find("span").text("open");
+                    $(".menu-bar ul").css('transform','translate(300px, 0px)');
+                    $(".menu-bar .topbtn").show();
+
+                }
+                else{
+                    $(this).find("i").removeClass("fa-bars");
+                    $(this).find("i").addClass("fa-times");
+                    $(this).find("span").text("close");
+                    $(".menu-bar ul").css('transform','translate(0, 0px)');
+                    $(".menu-bar .topbtn").hide();
+                }
+
 			});
 
 
@@ -215,22 +191,11 @@
 
 
 
-			function shownav(options , element){
-				if ($(window).scrollTop() > 2 ) { //options
-					element.addClass("colored");
-				} else {
-					element.removeClass("colored");
-				}
-			}
-			$(window).scroll(function(){
-				var element = $("header");
-				var options = $(".slider-area").height();
-				shownav(options , element);
-			});
-
 
 			var footerheight = $("footer").height();
 			$("<div></div>").insertBefore('footer').css("margin-bottom",footerheight);
+
+
 
 			if($(".openings").length){
 				$('.open-left a').on("click",function(){
@@ -241,5 +206,9 @@
 					$(".open-right>div:eq('"+index+"')").fadeIn();
 				});
 			}
+
+
+            $(".topbtn").goToTop();
+
 
 		});

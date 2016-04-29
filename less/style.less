@@ -10,7 +10,7 @@
 body
 {
   margin:0;
-  padding:0;
+  padding:0 0 0 50px;
   outline:none;
   overflow-x:hidden ;
   font-family: Brandon Grotesque;
@@ -52,16 +52,14 @@ ul{
   transition: left 0.4s ease 0s,top 0.4s ease 0s;
 
 }
+
+
+
 header{
   padding: 50px;
-  position: fixed;
+  position:absolute;
   width: 100%;
   z-index: 9999;
-  &:extend(.transition);
-  &.colored{
-    background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
-    padding: 14px 50px;
-  }
   .logo{
     width: 145px;
     float:left;
@@ -69,95 +67,53 @@ header{
       width:100%;
     }
   }
-  .btn-nav {
-    background-color: #fff;
-    color: #fff;
-    cursor: pointer;
-    float: right;
-    font-size: 0.875em;
-    height: 40px;
-    position: relative;
-    text-transform: uppercase;
-    width: 44px;
-    &::before {
-      color: #fff;
-      content: "MENU";
-      font-size: 22px;
-      font-weight: 500;
-      position: absolute;
-      right: 130%;
-      top: 7px;
-    }
-    span {
-      background: #00799B none repeat scroll 0 0;
-      height: 2px;
-      position: absolute;
-      right: 9px;
-      top: 19px;
-      transition: all 200ms ease 0s;
-      width: 26px;
-      z-index: 2;
-      &::before, &::after {
-        background: #00799B none repeat scroll 0 0;
-        content: "";
-        height: 2px;
-        left: 0;
-        position: absolute;
-        transition: all 200ms ease 0s;
-        width: 100%;
-      }
-      &::before {
-        top: -7px;
-      }
-      &::after {
-        top: 7px;
-      }
-    }
-    &.active{
-      span{
-        background: transparent none repeat scroll 0 0;
-        transform: rotate(90deg);
-        &::before{
-          top: 0;
-          transform: rotate(-45deg);
-          transition-delay: 300ms;
-        }
-        &:after{
-          top: 0;
-          transform: rotate(45deg);
-          transition-delay: 300ms;
-        }
-      }
-    }
-  }
 }
+
+
+
+
+
 .menu-bar{
-  background: #2e2e2e none repeat scroll 0 0;
+  background: rgba(38, 50, 56, 0.95) none repeat scroll 0 0;
+  display: flex;
   height: 100%;
-  padding-top: 130px;
+  left: -415px;
   position: fixed;
-  right: -400px;
-  transition: all 0.3s ease 0s;
-  width: 400px;
-  z-index: 999;
+  transition: all 0.5s ease 0s;
+  width: 465px;
+  z-index: 9999;
+  overflow: hidden;
   &.active1{
-   right:0;
+   left:0;
+  }
+  &:after{
+    background: #1e2a30 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    position: fixed;
+    width: 50px;
+    left:0;
+    z-index: -1;
   }
   ul{
+    align-self: center;
     margin: 11px 0;
-    padding: 0 37px;
-    &:extend(block);
+    padding: 0 50px;
+    transform: translate(300px, 0px);
+    &:extend(.blockin);
+    &:extend(.transition);
     li{
       text-align: right;
       &:extend(block);
       a{
-        color: #8b8b8b;
+        color: #90a4ae;
         display: inline-block;
-        font-size: 35px;
+        font-family: "Lucida Console";
+        font-size: 24px;
         font-weight: 500;
-        margin-bottom: 6px;
-        text-transform: uppercase;
+        margin: 0 0 7px;
         position: relative;
+        text-transform: capitalize;
         .nav-link-mask {
           display: inline-block;
           height: 100%;
@@ -186,10 +142,6 @@ header{
           transform: translate3d(0px, 0px, 0px);
         }
       }
-      &.active{
-        border-bottom: 1px solid #666666;
-        margin-bottom: 11px;
-      }
       &.active a .nav-link-mask,
       &.active a .nav-link-mask-text{
         transform: translate3d(0px, 0px, 0px);
@@ -197,21 +149,69 @@ header{
 
     }
   }
+  .toggle-btn{
+    background: #171e21 none repeat scroll 0 0;
+    cursor: pointer;
+    height: 53px;
+    position: absolute;
+    right: -33px;
+    top: 34px;
+    transform: rotate(90deg);
+    width: 120px;
+    i{
+      color: #afafaf;
+      float: left;
+      font-size: 18px;
+      margin: 17px 5px 17px 22px;
+      transform: rotate(90deg);
+    }
+    span{
+      color: #fff;
+      display: inline-block;
+      font-family: arial;
+      font-size: 15px;
+      margin: 15px 0 0;
+      text-transform: uppercase;
+    }
+  }
+  .topbtn{
+    bottom: 0;
+    color: #90a4ae;
+    cursor: pointer;
+    font-family: arial;
+    font-weight: bold;
+    padding-bottom: 11px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50px;
+    i{
+      font-size: 19px;
+      margin-bottom: 8px
+    }
+    &:hover,&:hover i{
+       color:#fff;
+     }
+  }
 }
 .social-icons{
-  background: #282828 none repeat scroll 0 0;
-  margin-top: 27px;
-  padding: 15px 40px;
+  bottom: 0;
+  left: 0;
+  padding: 12px 50px;
+  position: absolute;
   text-align: right;
-  span{
-    color: #fff;
-    font-size: 17px;
-    margin-right: 9px;
-  }
+  width: 100%;
+
   a{
-    color: #fff;
-    font-size: 20px;
-    margin: 0 3px;
+    color: #a0b4be;
+    display: inline-block;
+    font-size: 25px;
+    text-align: center;
+    width: 36px;
+    &:hover{
+      color:#fff;
+    }
   }
 }
 .main-slider {
@@ -1625,19 +1625,19 @@ footer{
 
 
 @media (min-width: 0px) {
-	
+
 }
 @media only screen and (min-width: 0px) and (max-width: 767px) {
 
 }
 @media only screen and (min-width: 0px) and (max-width: 480px) {
-	
+
 }
 @media (min-width: 768px) {
 
 }
-@media (min-width: 992px) {	
-	
+@media (min-width: 992px) {
+
 }
 @media (min-width: 1200px) {
 
