@@ -73,7 +73,6 @@
 						"height": imgheight,
 						"position": "relative",
 					});
-
 				}
 				else {
 
@@ -111,6 +110,44 @@
 			}
 
 
+			function stopSubNav(imgheight){
+
+
+
+				function stopNav(){
+					if ($(this).scrollTop() > imgheight) {
+						$(".careers-head").css({
+							position:"fixed",
+							left:"25px",
+						});
+					} else {
+						$(".careers-head").css({
+							position:"absolute",
+							left:0
+						});
+					}
+				}
+
+
+
+				$(window).scroll(function(){
+					stopNav();
+				});
+				stopNav();
+
+
+				$('.careers-head span').on("click",function(){
+
+					var index = $(this).index();
+					var topposition = $(".careers-body>div:eq('"+index+"')").offset().top;
+					topposition -= 50;
+					$('html, body').animate({scrollTop : topposition},500);
+					return false;
+				});
+			}
+
+
+
 			var imgheight;
 
 			if($(".imgs").length){
@@ -118,12 +155,15 @@
 				theImage.src = $(".imgs").attr("src");
 				theImage.onload = function() {
 					imgheight = $(".imgs").height();
+                    imgheight-=20;
 					runcode(imgheight);
+					stopSubNav(imgheight);
 				};
 			}
 			else{
 				imgheight = winheight;
 				runcode(imgheight);
+				stopSubNav(imgheight);
 			}
 
 
