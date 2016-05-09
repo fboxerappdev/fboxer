@@ -534,7 +534,6 @@ header{
       height: 320px;
       overflow: hidden;
       position: relative;
-      cursor: pointer;
       &::before{
         background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
         content: "";
@@ -572,22 +571,39 @@ header{
       z-index: 2;
       h3{
         color: #fff;
-        font-size: 32px;
+        font-size: 24px;
         font-weight: 500;
         margin: 0 0 5px;
       }
       span{
         color: #f3f3f3;
         display: inline-block;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 500;
         margin-bottom: 5px;
         width: 100%;
       }
       a{
-        color: #00c0e5;
-        font-size: 18px;
+        background: rgba(0, 192, 229, 0.8) none repeat scroll 0 0;
+        bottom: 10px;
+        color: #fff;
+        font-size: 14px;
+        padding: 5px 11px;
+        position: absolute;
+        right: -180px;
+        &:extend(.transition);
+        &:hover{
+          background: rgba(0, 192, 229, 1) none repeat scroll 0 0;
+        }
+        i{
+          font-size: 16px;
+          margin-left: 5px;
+          transform: translate(0px, 2px);
+        }
       }
+    }
+    &:hover a{
+      right: 10px;
     }
   }
 }
@@ -998,6 +1014,18 @@ header{
       top: 50px;
       z-index: 3;
     }
+    a{
+      &:extend(.portfolio .portfolio-item .abs-box a);
+      z-index: 9;
+      i{
+        font-size: 17px;
+        margin-left: 6px;
+        transform: translate(0px, 2px);
+      }
+    }
+    &:hover a{
+      right:10px;
+    }
   }
 }
 .gray-box{
@@ -1019,17 +1047,15 @@ header{
   max-width: 880px;
 }
 .ser-detail-item{
-  background: #f2f2f2 none repeat scroll 0 0;
-  height: 720px;
+  background: #f2f2f2 none repeat scroll center center / cover;
   overflow: hidden;
   position: relative;
    img{
-     width:100%;
-     position:absolute;
+     display:none;
    }
   .ser-info-box{
-    background: transparent url("../images/wd-line-1.png") no-repeat scroll 60px 142px;
-    padding: 140px 0 140px 10%;
+    height: 590px;
+    padding: 130px 0 100px 10%;
     position: relative;
     width: 50%;
     &.left{
@@ -1119,7 +1145,10 @@ header{
 }
 .casestudies{
   padding: 60px 0;
+  position: relative;
   text-align: center;
+  z-index: 7;
+
   p{
     color: #808080;
     font-family: arial;
@@ -1233,9 +1262,20 @@ header{
 }
 
 
+.line-svg{
+  height: 100%;
+  left: 50%;
+  margin-left: -600px;
+  max-width: 1200px;
+  overflow: visible !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 
-
-
+.padding40{
+  padding:50px 0;
+}
 
 footer{
   background: #fff none repeat scroll 0 0;

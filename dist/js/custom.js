@@ -168,10 +168,6 @@
 
 
 
-
-
-
-
 			$(".portfolio-slider").mousemove(function(e){
 
 				var mouseX = e.pageX - $('.bg-images').offset().left;
@@ -247,8 +243,14 @@
 				});
 			}
 
-
             $(".topbtn").goToTop();
+			if($(".ser-detail-item").length){
 
+				$(".ser-detail-item").each(function() {
+					var imagesrc = $(this).children("img").attr("src");
+
+					$(this).css("background-image","url('"+ imagesrc +"')");
+				});
+			}
 
 		});

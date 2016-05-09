@@ -27,13 +27,15 @@ body {
 .menu-bar ul,
 .portfolio .portfolio-item .portfolio-item-content::before,
 .portfolio .portfolio-item .portfolio-item-content img,
+.portfolio .portfolio-item .abs-box a,
 .work-flow a,
 .why-choose .bx-wrapper .bx-pager a,
 .services-list .services-item img,
 .casestudies a,
 .openings .open-left a,
 .openings .open-right .apply a,
-.contact-form button {
+.contact-form button,
+.services-list .services-item a {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
@@ -520,7 +522,6 @@ header .logo img {
   height: 320px;
   overflow: hidden;
   position: relative;
-  cursor: pointer;
 }
 .portfolio .portfolio-item .portfolio-item-content::before {
   background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
@@ -557,21 +558,38 @@ header .logo img {
 }
 .portfolio .portfolio-item .abs-box h3 {
   color: #fff;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 500;
   margin: 0 0 5px;
 }
 .portfolio .portfolio-item .abs-box span {
   color: #f3f3f3;
   display: inline-block;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 500;
   margin-bottom: 5px;
   width: 100%;
 }
-.portfolio .portfolio-item .abs-box a {
-  color: #00c0e5;
-  font-size: 18px;
+.portfolio .portfolio-item .abs-box a,
+.services-list .services-item a {
+  background: rgba(0, 192, 229, 0.8) none repeat scroll 0 0;
+  bottom: 10px;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 11px;
+  position: absolute;
+  right: -180px;
+}
+.portfolio .portfolio-item .abs-box a:hover {
+  background: #00c0e5 none repeat scroll 0 0;
+}
+.portfolio .portfolio-item .abs-box a i {
+  font-size: 16px;
+  margin-left: 5px;
+  transform: translate(0px, 2px);
+}
+.portfolio .portfolio-item:hover a {
+  right: 10px;
 }
 .work-flow {
   background: #1c1b20 none no-repeat scroll 0 0 / cover;
@@ -960,6 +978,17 @@ header .logo img {
   top: 50px;
   z-index: 3;
 }
+.services-list .services-item a {
+  z-index: 9;
+}
+.services-list .services-item a i {
+  font-size: 17px;
+  margin-left: 6px;
+  transform: translate(0px, 2px);
+}
+.services-list .services-item:hover a {
+  right: 10px;
+}
 .gray-box {
   background: #eeebeb none repeat scroll 0 0;
   clear: both;
@@ -979,18 +1008,16 @@ header .logo img {
   max-width: 880px;
 }
 .ser-detail-item {
-  background: #f2f2f2 none repeat scroll 0 0;
-  height: 720px;
+  background: #f2f2f2 none repeat scroll center center / cover;
   overflow: hidden;
   position: relative;
 }
 .ser-detail-item img {
-  width: 100%;
-  position: absolute;
+  display: none;
 }
 .ser-detail-item .ser-info-box {
-  background: transparent url("../images/wd-line-1.png") no-repeat scroll 60px 142px;
-  padding: 140px 0 140px 10%;
+  height: 590px;
+  padding: 130px 0 100px 10%;
   position: relative;
   width: 50%;
 }
@@ -1068,7 +1095,9 @@ header .logo img {
 }
 .casestudies {
   padding: 60px 0;
+  position: relative;
   text-align: center;
+  z-index: 7;
 }
 .casestudies p {
   color: #808080;
@@ -1177,6 +1206,19 @@ header .logo img {
 }
 .cs-info img {
   width: 100%;
+}
+.line-svg {
+  height: 100%;
+  left: 50%;
+  margin-left: -600px;
+  max-width: 1200px;
+  overflow: visible !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.padding40 {
+  padding: 50px 0;
 }
 footer {
   background: #fff none repeat scroll 0 0;
