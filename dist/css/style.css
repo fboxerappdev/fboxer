@@ -3,12 +3,17 @@
 }
 body {
   margin: 0;
-  padding: 0 0 0 50px;
+  padding: 0;
   outline: none;
   overflow-x: hidden ;
   font-family: Brandon Grotesque;
 }
+.wapper {
+  padding-left: 50px;
+  position: relative;
+}
 .block,
+.wapper,
 .page-content,
 .portfolio-list,
 .serv-page .serv-item,
@@ -76,6 +81,7 @@ header {
 header .logo {
   width: 145px;
   float: left;
+  margin-left: 50px;
 }
 header .logo img {
   width: 100%;
@@ -755,6 +761,7 @@ header .logo img {
   position: absolute;
   top: 0;
   width: 100%;
+  padding-left: 50px;
 }
 .full-wind {
   width: 100%;

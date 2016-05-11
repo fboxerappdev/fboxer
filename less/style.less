@@ -10,16 +10,21 @@
 body
 {
   margin:0;
-  padding:0 0 0 50px;
+  padding:0;
   outline:none;
   overflow-x:hidden ;
   font-family: Brandon Grotesque;
 }
-
+.wapper{
+  padding-left: 50px;
+  position: relative;
+  &:extend(.block);
+}
 
 // Core variables and mixins
 @import "variables.less";
 @import "mixins.less";
+
 
 
 a
@@ -53,8 +58,6 @@ ul{
 
 }
 
-
-
 header{
   padding: 40px 50px;
   position: absolute;
@@ -63,6 +66,7 @@ header{
   .logo{
     width: 145px;
     float:left;
+    margin-left:50px;
     img{
       width:100%;
     }
@@ -607,6 +611,9 @@ header{
     }
   }
 }
+
+
+
 .work-flow {
   background: #1c1b20 none no-repeat scroll 0 0 / cover ;
   clear: both;
@@ -792,6 +799,7 @@ header{
   position: absolute;
   top: 0;
   width: 100%;
+  padding-left:50px;
 }
 .full-wind{
   width:100%;
@@ -852,6 +860,7 @@ header{
     }
   }
 }
+
 .about-content{
   display: inline-block;
   margin: 0;

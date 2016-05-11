@@ -55,8 +55,7 @@ $(document).ready(function(){
         else{
             $(".slider-area").css({
                 "height":"100%",
-                "position":"fixed",
-                "left":"50px"
+                "position":"fixed"
             });
             $(".rel-box").css({
                 "height":winheight,
@@ -175,23 +174,10 @@ $(document).ready(function(){
     if($(".imgs").length){
         $(".imgs").ready(function(){
             imgheight =$(".imgs").height();
-            imgheight-=18;
             runcode(imgheight);
             stopSubNav(imgheight);
             setTimeout(function(){
                 imgheight =$(".imgs").height();
-                runcode(imgheight);
-                stopSubNav(imgheight);
-            }, 500);
-        });
-    }
-    else if($(".vdi").length){
-        $(".vdi").ready(function(){
-            imgheight=winheight-250;
-            runcode(imgheight);
-            stopSubNav(imgheight);
-            setTimeout(function(){
-                imgheight =winheight-250;
                 runcode(imgheight);
                 stopSubNav(imgheight);
             }, 500);
@@ -202,7 +188,6 @@ $(document).ready(function(){
         runcode(imgheight);
         stopSubNav(imgheight);
     }
-
 
 
 
