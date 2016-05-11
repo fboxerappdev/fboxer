@@ -63,10 +63,9 @@ ul {
   float: left;
   height: 100%;
   position: fixed;
-  left: 0;
+  left: 0px;
   top: 0;
   width: 100%;
-  transition: left 0.4s ease 0s,top 0.4s ease 0s;
 }
 header {
   padding: 40px 50px;
@@ -116,12 +115,27 @@ header .logo img {
 .menu-bar ul li a {
   color: #90a4ae;
   display: inline-block;
-  font-family: "Lucida Console";
-  font-size: 24px;
-  font-weight: 500;
-  margin: 0 0 7px;
+  font-size: 23px;
+  font-weight: 400;
+  margin: 0 0 10px;
   position: relative;
   text-transform: capitalize;
+  transition: all 0.3s ease 0s;
+}
+.menu-bar ul li a:hover {
+  color: #fff;
+}
+.menu-bar ul li a:before {
+  background: transparent url("../images/fa-long-arrow-left.png") no-repeat scroll 22px 15px;
+  content: "";
+  height: 100%;
+  left: 160%;
+  position: absolute;
+  width: 52px;
+  transition: left 0.3s ease 0s;
+}
+.menu-bar ul li a:hover::before {
+  left: 100%;
 }
 .menu-bar ul li a .nav-link-mask {
   display: inline-block;
@@ -141,18 +155,6 @@ header .logo img {
   top: 0;
   transform: translate3d(100%, 0px, 0px);
   transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-}
-.menu-bar ul li a:hover .nav-link-mask,
-.menu-bar ul li a:focus .nav-link-mask {
-  transform: translate3d(0px, 0px, 0px);
-}
-.menu-bar ul li a:hover .nav-link-mask-text,
-.menu-bar ul li a:focus .nav-link-mask-text {
-  transform: translate3d(0px, 0px, 0px);
-}
-.menu-bar ul li.active a .nav-link-mask,
-.menu-bar ul li.active a .nav-link-mask-text {
-  transform: translate3d(0px, 0px, 0px);
 }
 .menu-bar .toggle-btn {
   background: #171e21 none repeat scroll 0 0;
@@ -350,7 +352,7 @@ header .logo img {
 }
 .page-content {
   background: #fff none repeat scroll 0 0;
-  padding: 70px 0;
+  padding: 30px 0;
   position: relative;
   z-index: 1;
 }
@@ -376,21 +378,20 @@ header .logo img {
   color: red;
 }
 .page-content .we-build h3 {
-  font-size: 60px;
-  font-weight: 700;
+  font-size: 43px;
+  font-weight: 400;
   margin-top: 35px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .page-content .we-build p {
   display: table;
-  font-size: 27px;
-  font-weight: 500;
+  font-size: 22px;
   margin: 14px auto 24px;
   max-width: 1150px;
 }
 .page-content .we-build a {
   color: #008cb1;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 500;
 }
 .page-content .we-build a i {
@@ -417,10 +418,10 @@ header .logo img {
   width: 480px;
 }
 .head2 {
-  font-size: 56px;
-  font-weight: 600;
+  font-size: 44px;
+  font-weight: 400;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .technologies {
   background: transparent url("../images/technologies-big.svg") no-repeat scroll center 0;
@@ -445,14 +446,12 @@ header .logo img {
   top: 1510px;
 }
 .technologies .technologies-info h4 {
-  font-size: 45px;
-  font-weight: 600;
+  font-size: 38px;
+  font-weight: 400;
   margin-bottom: 15px;
-  text-transform: uppercase;
 }
 .technologies .technologies-info p {
   font-size: 20px;
-  font-weight: 500;
 }
 .technologies.technologies1 {
   background: transparent url("../images/integrations-big.svg") no-repeat scroll right 0;
@@ -466,38 +465,25 @@ header .logo img {
 .detailed-info {
   background: #f4f4f4 none repeat scroll 0 0;
   clear: both;
-  padding: 80px 0;
+  overflow: visible;
+  padding: 21px 0;
   position: relative;
-  z-index: 1;
+  z-index: 99;
 }
-.detailed-info .detailed-item {
-  -webkit-box-shadow: 1px 0 0 #c3c3c3;
-  -moz-box-shadow: 1px 0 0 #c3c3c3;
-  box-shadow: 1px 0 0 #c3c3c3;
-  float: left;
-  padding: 0 42px;
-  width: 25%;
+.detailed-info:before {
+  border-color: #f4f4f4 transparent;
+  border-style: solid;
+  border-width: 24px 32px 0;
+  content: "";
+  left: 50%;
+  margin-left: -32px;
+  position: absolute;
+  top: 100%;
 }
-.detailed-info .detailed-item:last-child {
-  box-shadow: 0 0 0 #c3c3c3;
-}
-.detailed-info .detailed-item img {
-  margin: 0 0 0 -7px;
-}
-.detailed-info .detailed-item h3 {
-  font-size: 40px;
-  font-weight: 600;
-  margin: 8px 0 -1px;
-}
-.detailed-info .detailed-item span {
-  color: #aaaaaa;
-  float: left;
+.detailed-info p {
   font-size: 22px;
-  font-weight: 600;
-  line-height: 1.2;
-  padding: 0 2px;
-  text-transform: capitalize;
-  width: 100%;
+  margin: 17px 0;
+  text-align: center;
 }
 .portfolio {
   display: table;
@@ -509,7 +495,7 @@ header .logo img {
 }
 .portfolio .portfolio-item {
   float: left;
-  padding: 14px;
+  padding: 3px;
 }
 .portfolio .portfolio-item.small-width {
   width: 25%;
@@ -594,7 +580,7 @@ header .logo img {
 .work-flow {
   background: #1c1b20 none no-repeat scroll 0 0 / cover;
   clear: both;
-  padding: 100px 14px;
+  padding: 70px 14px;
   position: relative;
   text-align: center;
   z-index: 1;
@@ -672,8 +658,8 @@ header .logo img {
   height: 44px;
 }
 .contact-form label {
-  font-family: arial;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: 500;
   margin-bottom: 12px;
 }
 .contact-form textarea {
@@ -970,7 +956,6 @@ header .logo img {
 .services-list .services-item span {
   color: #fff;
   font-size: 36px;
-  font-weight: 500;
   left: 0;
   position: absolute;
   right: 0;
@@ -1036,17 +1021,15 @@ header .logo img {
 }
 .ser-detail-item .ser-info-box h3 {
   color: #2066ab;
-  font-size: 36px;
-  font-weight: 600;
+  font-size: 33px;
+  font-weight: 500;
   letter-spacing: normal;
   line-height: 44px;
   margin: 0 0 20px;
-  text-transform: uppercase;
 }
 .ser-detail-item .ser-info-box p {
   color: #0f0f0f;
   font-size: 22px;
-  font-weight: 600;
 }
 .ser-detail-item .ser-info-box.color-b1 span {
   color: #999999;
