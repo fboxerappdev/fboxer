@@ -10,7 +10,7 @@
             $window = $(window),
             $body = $('html, body'),
             option = easing || 'default',
-            root = 0,
+            root = $window.scrollTop(),
             scroll = false,
             scrollY,
             view;

@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 
 
-    $.scrollSpeed(100, 1800);
+    $.scrollSpeed(100, 1000);
 
 
     $('.bxslider').bxSlider({
@@ -189,6 +189,15 @@ $(document).ready(function(){
         stopSubNav(imgheight);
     }
 
+
+
+
+
+
+    $('.donw-page').on("click",function(){
+        $('html, body').animate({scrollTop : winheight},1000);
+        return false;
+    });
 
 
 
