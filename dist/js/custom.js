@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 
 
-    $.scrollSpeed(100, 1000);
+    $.scrollSpeed(100, 1800);
 
 
     $('.bxslider').bxSlider({
@@ -271,11 +271,10 @@ $(document).ready(function(){
     }
 
     $(".topbtn").goToTop();
-    if($(".ser-detail-item").length){
 
+    if($(".ser-detail-item").length){
         $(".ser-detail-item").each(function() {
             var imagesrc = $(this).children("img").attr("src");
-
             $(this).css("background-image","url('"+ imagesrc +"')");
         });
     }
