@@ -16,6 +16,8 @@ body {
 .wapper,
 .page-content,
 .portfolio-list,
+.marking,
+.marking .marking-itme .img-box,
 .project-pages .Project-page-pic,
 .project-pages .Project-page-info,
 .serv-page .serv-item,
@@ -448,7 +450,7 @@ header .logo img {
   max-width: 1150px;
 }
 .page-content .we-build a {
-  color: #008cb1;
+  color: #cc1030;
   font-size: 20px;
   font-weight: 500;
 }
@@ -616,7 +618,7 @@ header .logo img {
 }
 .portfolio .portfolio-item .abs-box a,
 .services-list .services-item a {
-  background: rgba(0, 192, 229, 0.8) none repeat scroll 0 0;
+  background: #f03454 none repeat scroll 0 0;
   bottom: 10px;
   color: #fff;
   font-size: 14px;
@@ -625,7 +627,7 @@ header .logo img {
   right: -180px;
 }
 .portfolio .portfolio-item .abs-box a:hover {
-  background: #00c0e5 none repeat scroll 0 0;
+  background: #CE1232 none repeat scroll 0 0;
 }
 .portfolio .portfolio-item .abs-box a i {
   font-size: 16px;
@@ -660,7 +662,7 @@ header .logo img {
 }
 .work-flow a,
 .contact-form button {
-  background: #00c0e5 none repeat scroll 0 0;
+  background: #f03454 none repeat scroll 0 0;
   border-radius: 50px;
   color: #fff;
   display: inline-block;
@@ -671,7 +673,11 @@ header .logo img {
 }
 .work-flow a:hover,
 .contact-form button:hover {
-  background: #00799B;
+  background: #cc1030;
+}
+.work-flow svg {
+  height: 70px;
+  width: 100px;
 }
 .contact-info {
   display: inline-block;
@@ -683,7 +689,7 @@ header .logo img {
   width: 100px;
 }
 .contact-info span {
-  color: #00c0e5;
+  color: #f03454;
   display: inline-block;
   font-weight: 600;
   margin: 20px 0 0;
@@ -695,7 +701,7 @@ header .logo img {
   margin: 18px 0 24px;
 }
 .contact-info h4 {
-  color: #00c0e5;
+  color: #f03454;
   font-size: 27px;
   margin: 0 0 20px;
 }
@@ -779,7 +785,7 @@ header .logo img {
   right: 210px;
 }
 .portfolio-list .portlist-item p a {
-  background: #00c0e5 none repeat scroll 0 0;
+  background: #f03454 none repeat scroll 0 0;
   border-radius: 2px;
   color: #fff;
   display: inline;
@@ -799,7 +805,7 @@ header .logo img {
   font-weight: bold;
 }
 #filters li span.active {
-  background: #00C0E5;
+  background: #f03454;
 }
 .h2 {
   font-size: 34px;
@@ -974,7 +980,7 @@ header .logo img {
 }
 .our-clients ul li {
   float: left;
-  padding: 30px 10px;
+  padding: 13px;
   width: 20%;
 }
 .our-clients ul li img {
@@ -1036,6 +1042,9 @@ header .logo img {
 }
 .services-list .services-item:hover a {
   right: 10px;
+}
+.services-list .services-item a:hover {
+  background: #D31737;
 }
 .gray-box {
   background: #eeebeb none repeat scroll 0 0;
@@ -1155,14 +1164,14 @@ header .logo img {
 }
 .casestudies a {
   border: 2px solid;
-  color: #00C0E5;
+  color: #f03454;
   font-size: 17px;
   font-weight: 700;
   padding: 10px 25px;
   text-transform: uppercase;
 }
 .casestudies a:hover {
-  background: #00C0E5;
+  background: #f03454;
   color: #fff;
 }
 .cs-topbox {
@@ -1264,6 +1273,40 @@ header .logo img {
   margin-left: -25px;
   position: absolute;
   width: 38px;
+}
+.marking {
+  background: #eaeced;
+  position: relative;
+  z-index: 1;
+}
+.marking .marking-itme {
+  border-bottom: 1px solid #e2e2e2;
+  display: inline-block;
+  padding: 60px 0;
+  width: 100%;
+}
+.marking .marking-itme .text-box h3 {
+  color: #202020;
+  font-size: 38px;
+  font-weight: 600;
+  margin: 0 0 2px;
+  text-transform: uppercase;
+}
+.marking .marking-itme .text-box span {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.marking .marking-itme .text-box p {
+  color: #7c7c7c;
+  font-size: 19px;
+  line-height: 1.4;
+  margin: 15px 0;
+}
+.marking .marking-itme .img-box {
+  height: 360px;
+  padding: 10px 0;
 }
 footer {
   background: #fff none repeat scroll 0 0;
@@ -1443,7 +1486,7 @@ footer .footer ul li span {
   cursor: pointer;
 }
 .careers .careers-head span.active {
-  box-shadow: 0 -1px 0 #2CBDE4 inset;
+  box-shadow: 0 -1px 0 #f03454 inset;
 }
 .careers .careers-body {
   padding-top: 100px;
@@ -1509,7 +1552,7 @@ footer .footer ul li span {
 }
 .openings .open-left a:hover,
 .openings .open-left a.active {
-  color: #0899c0;
+  color: #CF1333;
 }
 .openings .open-right {
   float: left;
@@ -1542,7 +1585,7 @@ footer .footer ul li span {
   margin-bottom: 12px;
 }
 .openings .open-right .apply a {
-  background: #2cbde4 none repeat scroll 0 0;
+  background: #f03454 none repeat scroll 0 0;
   color: #fff;
   display: inline-block;
   font-size: 18px;
@@ -1551,5 +1594,5 @@ footer .footer ul li span {
   padding: 5px 36px;
 }
 .openings .open-right .apply a:hover {
-  background: #1AABD2;
+  background: #CF1333;
 }

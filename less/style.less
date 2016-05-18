@@ -471,7 +471,7 @@ header{
       max-width: 1150px;
     }
     a{
-      color: #008cb1;
+      color: #cc1030;
       font-size: 20px;
       font-weight: 500;
       i{
@@ -641,7 +641,7 @@ header{
         width: 100%;
       }
       a{
-        background: rgba(0, 192, 229, 0.8) none repeat scroll 0 0;
+        background: #f03454 none repeat scroll 0 0;
         bottom: 10px;
         color: #fff;
         font-size: 14px;
@@ -650,7 +650,7 @@ header{
         right: -180px;
         &:extend(.transition);
         &:hover{
-          background: rgba(0, 192, 229, 1) none repeat scroll 0 0;
+          background: #CE1232 none repeat scroll 0 0;
         }
         i{
           font-size: 16px;
@@ -690,7 +690,7 @@ header{
     max-width: 839px;
   }
   a{
-    background: #00c0e5 none repeat scroll 0 0;
+    background: #f03454 none repeat scroll 0 0;
     border-radius: 50px;
     color: #fff;
     display: inline-block;
@@ -700,8 +700,12 @@ header{
     padding: 12px 57px;
     &:extend(.transition);
     &:hover{
-      background: #00799B;
+      background: #cc1030;
     }
+  }
+  svg{
+    height: 70px;
+    width: 100px;
   }
 }
 
@@ -714,7 +718,7 @@ header{
     width: 100px;
   }
   span{
-    color: #00c0e5;
+    color: #f03454;
     display: inline-block;
     font-weight: 600;
     margin: 20px 0 0;
@@ -726,7 +730,7 @@ header{
     margin: 18px 0 24px;
   }
   h4{
-    color: #00c0e5;
+    color: #f03454;
     font-size: 27px;
     margin: 0 0 20px;
   }
@@ -812,7 +816,7 @@ header{
         right: 210px;
       }
       a{
-        background: #00c0e5 none repeat scroll 0 0;
+        background: #f03454 none repeat scroll 0 0;
         border-radius: 2px;
         color: #fff;
         display: inline;
@@ -833,7 +837,7 @@ header{
     font-size: 15px;
     font-weight: bold;
     span.active{
-      background:#00C0E5;
+      background:#f03454;
     }
   }
 }
@@ -1025,7 +1029,7 @@ header{
     width: 100%;
     li{
       float: left;
-      padding: 30px 10px;
+      padding: 13px;
       width: 20%;
       img{
         max-width: 100%;
@@ -1033,6 +1037,7 @@ header{
     }
   }
 }
+
 .services-list{
   float: left;
   margin: 0 -12px;
@@ -1090,6 +1095,9 @@ header{
     }
     &:hover a{
       right:10px;
+    }
+    & a:hover{
+      background:#D31737;
     }
   }
 }
@@ -1222,14 +1230,14 @@ header{
   }
   a{
     border: 2px solid;
-    color: #00C0E5;
+    color: #f03454;
     font-size: 17px;
     font-weight: 700;
     padding: 10px 25px;
     text-transform: uppercase;
     &:extend(.transition);
     &:hover{
-      background: #00C0E5;
+      background: #f03454;
       color:#fff;
     }
   }
@@ -1338,6 +1346,48 @@ header{
   position: absolute;
   width: 38px;
 }
+
+.marking{
+  &:extend(.block);
+  background:#eaeced;
+  position: relative;
+  z-index: 1;
+  .marking-itme{
+    border-bottom: 1px solid #e2e2e2;
+    display: inline-block;
+    padding: 60px 0;
+    width: 100%;
+    .text-box{
+      h3{
+        color: #202020;
+        font-size: 38px;
+        font-weight: 600;
+        margin: 0 0 2px;
+        text-transform: uppercase;
+      }
+      span{
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+      p{
+        color: #7c7c7c;
+        font-size: 19px;
+        line-height: 1.4;
+        margin: 15px 0;
+      }
+    }
+    .img-box{
+     &:extend(.block);
+      height:360px;
+      padding:10px 0;
+    }
+  }
+}
+
+
+
 
 
 footer{
@@ -1535,7 +1585,7 @@ footer{
       padding: 12px 42px;
       cursor: pointer;
       &.active{
-        box-shadow: 0 -1px 0 #2CBDE4 inset;
+        box-shadow: 0 -1px 0 #f03454 inset;
       }
     }
   }
@@ -1603,7 +1653,7 @@ footer{
       width: 100%;
       &:extend(.transition);
       &:hover,&.active{
-        color:#0899c0;
+        color:#CF1333;
       }
     }
   }
@@ -1636,7 +1686,7 @@ footer{
         margin-bottom: 12px;
       }
       a{
-        background: #2cbde4 none repeat scroll 0 0;
+        background: #f03454 none repeat scroll 0 0;
         color: #fff;
         display: inline-block;
         font-size: 18px;
@@ -1645,7 +1695,7 @@ footer{
         padding: 5px 36px;
         &:extend(.transition);
         &:hover{
-          background:#1AABD2;
+          background:#CF1333;
         }
       }
     }

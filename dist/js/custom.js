@@ -265,6 +265,7 @@ $(document).ready(function(){
 
 
     var footerheight = $("footer").height();
+    var footerheight = $("footer").height();
     $("<div></div>").insertBefore('footer').css("margin-bottom",footerheight);
 
 
@@ -288,4 +289,31 @@ $(document).ready(function(){
         });
     }
 
+    if($('.work-flow').length){
+        $(window).on("load",function(){
+            var $svg1 = $('.icon-svg').drawsvg({
+                duration: 400,
+                stagger:150
+            });
+            $win = $(window);
+            var offset = $('.work-flow').offset().top;
+            var high = $('.work-flow').height();
+            offset= offset - $win.height() + high;
+
+            var sts = true;
+
+
+            $win.on('scroll', function() {
+                if($win.scrollTop()>offset && sts){
+                    $svg1.drawsvg('animate');
+                    sts=false;
+                }
+            });
+
+            if($win.scrollTop()>offset && sts){
+                $svg1.drawsvg('animate');
+                sts=false;
+            }
+        });
+    }
 });
