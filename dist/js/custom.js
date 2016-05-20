@@ -2,7 +2,9 @@
 
 $(document).ready(function(){
 
-    $("body").show();
+
+    $("body").css("visibility","visible");
+
 
     $("body").cssAnimate();
 

@@ -1,6 +1,18 @@
+
+
+
+
+
 function svgClip1(){
-    var draw = SVG('marking-clip1').size('100%', '100%');
+
+
+
+    var draw = SVG('marking-clip1').size(653,360);
+    var box = draw.viewbox();
+    draw.attr('viewBox',box);
+
     var symbol = draw.symbol();
+
     var  layer7= symbol.image('images/svg/clip1/layer-7.png','100%','290');
     var  layer8= symbol.image('images/svg/clip1/layer-8.png','150','135').x(444).y(10);
     var  layer4= symbol.image('images/svg/clip1/layer-4.png','75','56').x(541).y(111);
@@ -84,7 +96,11 @@ function svgClip1(){
 }
 
 function svgClip2(){
-    var draw = SVG('marking-clip2').size('100%', '100%');
+    var draw = SVG('marking-clip2').size(653,360);
+    var box = draw.viewbox();
+    draw.attr('viewBox',box);
+
+
     var symbol = draw.symbol();
 
     var  layer1= symbol.image('images/svg/clip2/layer-1.png','240','180').x(15).y(0);
@@ -126,7 +142,7 @@ function svgClip2(){
         $win = $(window);
         var offset = $('#marking-clip2').offset().top;
         var high = $('#marking-clip2').height();
-        offset= offset - $win.height() + high;
+        offset= offset - $win.height() + (high/2);
         var sts = true;
         $win.on('scroll', function() {
             if($win.scrollTop()>offset && sts){
@@ -148,7 +164,9 @@ function svgClip2(){
 
 
 function svgClip3(){
-    var draw = SVG('marking-clip3').size('100%', '100%');
+    var draw = SVG('marking-clip3').size(653,514);
+    var box = draw.viewbox();
+    draw.attr('viewBox',box);
     var  symbol1 = draw.symbol();
     var  layer2= symbol1.image('images/svg/clip3/layer-2.png','200','165').x(376).y(220);
     var  layer3= symbol1.image('images/svg/clip3/layer-3.png','190','90').x(370).y(100);
@@ -258,7 +276,7 @@ function svgClip3(){
         $win = $(window);
         var offset = $('#marking-clip3').offset().top;
         var high = $('#marking-clip3').height();
-        offset= offset - $win.height() + high;
+        offset= offset - $win.height() + (high/2);
         var sts = true;
         $win.on('scroll', function() {
             if($win.scrollTop()>offset && sts){
@@ -279,3 +297,11 @@ function svgClip3(){
 svgClip1();
 svgClip2();
 svgClip3();
+
+
+
+
+
+
+
+

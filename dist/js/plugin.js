@@ -76,13 +76,15 @@
 		
 		var $elems = $('.animateblock');
 		var winheight = $(window).height();
-		
-		$(window).scroll(function(){
+		$(window).load(function(){
+			$(window).scroll(function(){
+				animate_elems();
+				$('.animated').css('opacity','1');
+			});
 			animate_elems();
 			$('.animated').css('opacity','1');
 		});
-		animate_elems();
-		$('.animated').css('opacity','1');
+
 		function animate_elems() {
 		    wintop = $(window).scrollTop(); // calculate distance from top of window
 			// loop through each item to check when it animates
