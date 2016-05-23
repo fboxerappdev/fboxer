@@ -16,6 +16,7 @@ body {
 .wapper,
 .page-content,
 .portfolio-list,
+.about-services,
 .marking,
 .marking .marking-itme .img-box,
 .project-pages .Project-page-pic,
@@ -30,6 +31,9 @@ body {
 .blockin,
 .menu-bar ul,
 .page-content .we-build,
+.port-slide-box,
+.port-slide-box .port-slider,
+.port-slide-box .port-slider .port-slide-item,
 .bg-black .srv-info ul {
   display: inline-block;
   width: 100%;
@@ -883,14 +887,81 @@ header .logo img {
   text-align: center;
 }
 .about-content p {
-  color: #797979;
-  font-size: 19px;
+  color: #6c6c6c;
+  font-size: 21px;
   font-weight: 500;
-  margin-bottom: 1px;
+  margin-bottom: 23px;
 }
 .about-content img {
   max-width: 100%;
   margin: 60px auto 0;
+}
+.about-services {
+  padding: 17px 0;
+}
+.about-services li {
+  color: #ffffff;
+  float: left;
+  font-size: 20px;
+  margin-bottom: 8px;
+  padding-left: 21px;
+  position: relative;
+  width: 33.33%;
+}
+.about-services li:before {
+  background: #f03454 none repeat scroll 0 0;
+  content: "";
+  height: 8px;
+  left: 0;
+  position: absolute;
+  top: 9px;
+  transform: rotate(45deg);
+  width: 8px;
+}
+.black-box {
+  background: #4d4d4f none repeat scroll 0 0;
+}
+.port-slide-box h2 {
+  color: #f03454;
+  font-size: 40px;
+  margin-bottom: 32px;
+}
+.port-slide-box .port-slider {
+  padding: 40px 0;
+}
+.port-slide-box .port-slider .port-slide-item {
+  max-width: 1500px;
+  padding: 12px 0 30px;
+}
+.port-slide-box .port-slider .port-slide-item .info {
+  padding: 10px 0;
+  text-align: left;
+}
+.port-slide-box .port-slider .port-slide-item .info h3 {
+  font-size: 35px;
+  margin-top: 60px;
+}
+.port-slide-box .port-slider .port-slide-item .info p {
+  font-size: 21px;
+  font-weight: 500;
+}
+.port-slide-box .port-slider .port-slide-item .img img {
+  width: 100%;
+}
+.port-slide-box .port-slider .bx-controls .bx-controls-direction a {
+  height: 90px;
+  margin-top: -80px;
+  width: 73px;
+}
+.port-slide-box .port-slider .bx-controls .bx-controls-direction a.bx-prev {
+  background: #363B41 url("../images/left.png") no-repeat scroll 14px center / 38px auto;
+  border-radius: 0 8px 8px 0;
+  left: 0;
+}
+.port-slide-box .port-slider .bx-controls .bx-controls-direction a.bx-next {
+  background: #363B41 url("../images/right.png") no-repeat scroll 18px center / 38px auto;
+  border-radius: 8px 0 0 8px;
+  right: 0;
 }
 .why-choose {
   background: #5a5a5a url("../images/why-choose.jpg") no-repeat scroll 0 0 / cover;

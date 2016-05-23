@@ -2,9 +2,7 @@
 
 $(document).ready(function(){
 
-
     $("body").css("visibility","visible");
-
 
     $("body").cssAnimate();
 
@@ -20,6 +18,17 @@ $(document).ready(function(){
         autoControls: false,
         pager:false
     });
+
+    if($('.bxslider-port').length){
+        $('.bxslider-port').bxSlider({
+            auto: true,
+            autoControls: true,
+            pager:false
+        });
+    }
+
+
+
 
     $('.choose-us').bxSlider({
         auto: false,
