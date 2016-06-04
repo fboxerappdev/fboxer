@@ -61,3 +61,17 @@
     font-weight: 600;
     font-style: italic;
 }
+
+
+@font-face {
+    font-family: "MajestiBanner-Bold";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/MajestiBanner-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/MajestiBanner-Bold.otf") format("opentype"), url("../fonts/MajestiBanner-Bold.woff") format("woff"), url("../fonts/MajestiBanner-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "MajestiBanner-Medium";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/MajestiBanner-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/MajestiBanner-Medium.otf") format("opentype"), url("../fonts/MajestiBanner-Medium.woff") format("woff"), url("../fonts/MajestiBanner-Medium.ttf") format("truetype");
+}

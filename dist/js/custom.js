@@ -241,41 +241,10 @@ $(document).ready(function(){
     });
 
 
-    $(".toggle-btn").click(function(){
-        $(".menu-bar").toggleClass("active1");
-
-        var status = $(".toggle-btn span").text();
-
-        if(status == "close"){
-            $(this).find("i").removeClass("fa-times");
-            $(this).find("i").addClass("fa-bars");
-            $(this).find("span").text("open");
-            $(".menu-bar ul").css('transform','translate(300px, 0px)');
-            $(".menu-bar .topbtn").show();
-
-        }
-        else{
-            $(this).find("i").removeClass("fa-bars");
-            $(this).find("i").addClass("fa-times");
-            $(this).find("span").text("close");
-            $(".menu-bar ul").css('transform','translate(0, 0px)');
-            $(".menu-bar .topbtn").hide();
-        }
-
-    });
-
-    // nav bar hover effect disable
-
-
-    //$( ".menu-bar ul li").each(function( index ) {
-    //    var text = $(">a",this).text();
-    //    $(">a",this).append('<span class="nav-link-mask"><span class="nav-link-mask-text">'+ text +'</span></span>');
-    //});
 
 
 
 
-    var footerheight = $("footer").height();
     var footerheight = $("footer").height();
     $("<div></div>").insertBefore('footer').css("margin-bottom",footerheight);
 
@@ -327,4 +296,25 @@ $(document).ready(function(){
             }
         });
     }
+
+
+    $(window).load(function(){
+        if($('.nav-box').length){
+            $(".nav-toggle").click(function(){
+                $('.nav-box').addClass("show");
+                setTimeout(function(){
+                    $('.nav-box').find("#mnbox").show();
+                },800);
+            });
+            $(".nav-box span").click(function(){
+                $('.nav-box').removeClass("show");
+                $('.nav-box').find("#mnbox").hide();
+            });
+
+        }
+    });
+
+
+
+
 });

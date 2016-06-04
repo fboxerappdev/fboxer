@@ -16,7 +16,6 @@ body
   font-family: Brandon Grotesque;
 }
 .wapper{
-  padding-left: 50px;
   position: relative;
   &:extend(.block);
 }
@@ -60,161 +59,85 @@ ul{
 }
 
 header{
-  padding: 40px 50px;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 9999;
   .logo{
-    width: 145px;
-    float:left;
-    margin-left:50px;
+    background: #000 none repeat scroll 0 0;
+    float: left;
+    width: 135px;
+    a{
+      padding: 31px 23px;
+      &:extend(.blockin);
+    }
     img{
       width:100%;
     }
   }
+  .nav-toggle{
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 0 0 30px rgba(29, 29, 29, 0.1);
+    color: #f03454;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 24px;
+    padding: 13px 22px;
+  }
 }
-
-
-
-.menu-bar{
-  background: rgba(38, 50, 56, 0.95) none repeat scroll 0 0;
-  display: flex;
-  height: 100%;
-  left: -335px;
-  position: fixed;
-  transition: all 0.5s ease 0s;
-  width: 385px;
-  z-index: 9999;
+.nav-box {
+  background: #121212 none repeat scroll 0 0;
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+  z-index:10;
   overflow: hidden;
-  top:0;
-  &.active1{
-   left:0;
+  -webkit-transition: all 0.5s cubic-bezier(.55,.06,.68,.19) 0s;
+  -moz-transition: all 0.5s cubic-bezier(.55,.06,.68,.19) 0s;
+  -ms-transition: all 0.5s cubic-bezier(.55,.06,.68,.19) 0s;
+  -o-transition: all 0.5s cubic-bezier(.55,.06,.68,.19) 0s;
+  transition:all 0.5s cubic-bezier(.55,.06,.68,.19) 0s;
+  display: flex;
+  span{
+    background: transparent url("../images/close.png") no-repeat scroll center center;
+    cursor: pointer;
+    height: 100px;
+    position: absolute;
+    width: 100px;
   }
-  &:after{
-    background: #1e2a30 none repeat scroll 0 0;
-    content: "";
+  &.show{
+    height:100vh;
+    width:100%;
+  }
+  .navbar-info{
+    display: flex;
     height: 100%;
-    position: fixed;
-    width: 50px;
-    left:0;
-    z-index: -1;
-  }
-  ul{
-    align-self: center;
-    margin: 11px 0;
-    padding: 0 50px;
-    transform: translate(300px, 0px);
-    &:extend(.blockin);
-    &:extend(.transition);
-    li{
-      text-align: right;
-      &:extend(block);
-
-      a{
-        color: #90a4ae;
-        display: inline-block;
-        font-size: 23px;
-        font-weight: 400;
-        margin: 0 0 10px;
-        position: relative;
-        text-transform: capitalize;
-        transition: all 0.3s ease 0s;
-        &:hover{
-          color:#fff;
-        }
-        &:before{
-          background: transparent url("../images/fa-long-arrow-left.png") no-repeat scroll 22px 15px;
-          content: "";
-          height: 100%;
-          left: 160%;
-          position: absolute;
-          width: 52px;
-          transition: left 0.3s ease 0s;
-        }
-        &:hover::before{
-          left: 100%;
-        }
-        .nav-link-mask {
-          display: inline-block;
-          height: 100%;
-          left: 0;
-          overflow: hidden;
-          position: absolute;
-          top: 0;
-          transform: translate3d(-100%, 0px, 0px);
-          transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-          width: 100%;
-          .nav-link-mask-text {
-            color: #ddd;
-            left: 0;
-            position: absolute;
-            top: 0;
-            transform: translate3d(100%, 0px, 0px);
-            transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-          }
-        }
-        //&:hover .nav-link-mask,
-        //&:focus .nav-link-mask {
-        //  transform: translate(0px, 0px);
-        //}
-        //&:hover .nav-link-mask-text,
-        //&:focus .nav-link-mask-text {
-        //  transform: translate(0px, 0px);
-        //}
-      }
-      //&.active a .nav-link-mask,
-      //&.active a .nav-link-mask-text{
-      //  transform: translate(0px, 0px);
-      //}
-
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 100%;
+    &>div{
+      align-self: center;
+      display: none;
+      width: 100%;
     }
-  }
-  .toggle-btn{
-    background: #171e21 none repeat scroll 0 0;
-    cursor: pointer;
-    height: 53px;
-    position: absolute;
-    right: -33px;
-    top: 34px;
-    transform: rotate(90deg);
-    width: 120px;
-    i{
-      color: #afafaf;
-      float: left;
-      font-size: 18px;
-      margin: 17px 5px 17px 22px;
-      transform: rotate(90deg);
-    }
-    span{
-      color: #fff;
+    .nav-list{
       display: inline-block;
-      font-family: arial;
-      font-size: 15px;
-      margin: 15px 0 0;
-      text-transform: uppercase;
+      padding: 14px 0;
+      width: 100%;
+      li{
+        a{
+          color: #fff;
+          font-family: MajestiBanner-Medium;
+          font-size: 70px;
+          line-height: 1.4;
+        }
+      }
     }
-  }
-  .topbtn{
-    bottom: 0;
-    color: #90a4ae;
-    cursor: pointer;
-    font-family: arial;
-    font-weight: bold;
-    padding-bottom: 11px;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    text-transform: uppercase;
-    width: 50px;
-    i{
-      font-size: 19px;
-      margin-bottom: 8px
-    }
-    &:hover,&:hover i{
-       color:#fff;
-     }
   }
 }
+
+
 .social-icons{
   bottom: 0;
   left: 0;
@@ -229,6 +152,7 @@ header{
     font-size: 25px;
     text-align: center;
     width: 36px;
+
     &:hover{
       color:#fff;
     }
@@ -543,7 +467,7 @@ header{
   overflow: visible;
   padding: 21px 0;
   position: relative;
-  z-index: 99;
+  z-index: 4;
   &:before{
     border-color: #f4f4f4 transparent;
     border-style: solid;
