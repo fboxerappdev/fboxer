@@ -73,16 +73,13 @@
 		});	
 	};
 	$.fn.cssAnimate = function() {
-		
 		var $elems = $('.animateblock');
 		var winheight = $(window).height();
 		$(window).load(function(){
 			$(window).scroll(function(){
 				animate_elems();
-				$('.animated').css('opacity','1');
 			});
 			animate_elems();
-			$('.animated').css('opacity','1');
 		});
 
 		function animate_elems() {
@@ -91,11 +88,14 @@
 			$elems.each(function(){
 				$elm = $(this);
 				$elmClass = $elm.attr('data-animate-class');
+				$elmDelay = $elm.attr('data-animate-delay');
 				if($elm.hasClass('animated')) { return true; } // if already animated skip to the next item
 				topcoords = $elm.offset().top; // element's distance from top of page in pixels
 				if(wintop > (topcoords - (winheight*.75))) {
 				// animate when top of the window is 3/4 above the element
-					$elm.addClass($elmClass+' animated');  
+					$elm.addClass($elmClass+' animated').css({
+						"animation-delay":$elmDelay
+					});
 				}
 			});
 		} // end animate_elems()

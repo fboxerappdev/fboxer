@@ -38,6 +38,8 @@ header .logo a,
   width: 100%;
 }
 .transition,
+.nav-box .navbar-info .right-text a,
+.homeicon #home-icon,
 .portfolio .portfolio-item .portfolio-item-content::before,
 .portfolio .portfolio-item .portfolio-item-content img,
 .portfolio .portfolio-item .abs-box a,
@@ -86,7 +88,7 @@ ul {
 }
 header {
   position: fixed;
-  width: 100%;
+  width: 220px;
   z-index: 9999;
 }
 header .logo {
@@ -95,7 +97,7 @@ header .logo {
   width: 135px;
 }
 header .logo a {
-  padding: 31px 23px;
+  padding: 18px 24px;
 }
 header .logo img {
   width: 100%;
@@ -108,6 +110,10 @@ header .nav-toggle {
   display: inline-block;
   font-size: 24px;
   padding: 13px 22px;
+}
+.slider-area-inner {
+  position: relative;
+  z-index: 11;
 }
 .nav-box {
   background: #121212 none repeat scroll 0 0;
@@ -125,6 +131,10 @@ header .nav-toggle {
   transition: all 0.5s cubic-bezier(0.55, 0.06, 0.68, 0.19) 0s;
   display: flex;
 }
+.nav-box > img {
+  opacity: 0.3;
+  position: absolute;
+}
 .nav-box span {
   background: transparent url("../images/close.png") no-repeat scroll center center;
   cursor: pointer;
@@ -134,7 +144,7 @@ header .nav-toggle {
 }
 .nav-box.show {
   height: 100vh;
-  width: 100%;
+  width: 200vh;
 }
 .nav-box .navbar-info {
   display: flex;
@@ -156,8 +166,58 @@ header .nav-toggle {
 .nav-box .navbar-info .nav-list li a {
   color: #fff;
   font-family: MajestiBanner-Medium;
-  font-size: 70px;
-  line-height: 1.4;
+  font-size: 56px;
+  line-height: 1.1;
+  position: relative;
+}
+.nav-box .navbar-info .nav-list li a:before {
+  background: #f03454 none repeat scroll 0 0;
+  content: "";
+  height: 2px;
+  left: -10px;
+  position: absolute;
+  top: 63%;
+  width: 0;
+  transition: all 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19) 0s;
+}
+.nav-box .navbar-info .nav-list li a:hover::before {
+  width: 120%;
+}
+.nav-box .navbar-info .right-text {
+  display: inline-block;
+  margin-top: 50px;
+  text-transform: uppercase;
+  width: 100%;
+}
+.nav-box .navbar-info .right-text h4 {
+  color: #929292;
+  font-size: 13px;
+  margin: 28px 0;
+}
+.nav-box .navbar-info .right-text a {
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 4px;
+  width: 100%;
+}
+.nav-box .navbar-info .right-text a:hover {
+  margin-left: 4px;
+}
+.homeicon {
+  color: Red;
+}
+.homeicon #home-icon {
+  fill: #f03454;
+  width: 28px;
+}
+.homeicon:hover #home-icon {
+  fill: #fff;
+}
+.navimg {
+  position: absolute;
+}
+.navimg img {
+  opacity: 0.2;
 }
 .social-icons {
   bottom: 0;
@@ -751,7 +811,6 @@ header .nav-toggle {
   position: absolute;
   top: 0;
   width: 100%;
-  padding-left: 50px;
 }
 .full-wind {
   width: 100%;

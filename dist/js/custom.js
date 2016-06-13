@@ -9,7 +9,6 @@ $(document).ready(function(){
     var winwid = window.innerWidth;
 
 
-
     $.scrollSpeed(100, 1000);
 
 
@@ -303,8 +302,8 @@ $(document).ready(function(){
             $(".nav-toggle").click(function(){
                 $('.nav-box').addClass("show");
                 setTimeout(function(){
-                    $('.nav-box').find("#mnbox").show();
-                },800);
+                    $('.nav-box').find("#mnbox").fadeIn();
+                },700);
             });
             $(".nav-box span").click(function(){
                 $('.nav-box').removeClass("show");
@@ -316,5 +315,20 @@ $(document).ready(function(){
 
 
 
+    //nav bar change image on hover
 
+    var images="";
+    $('.nav-list li a').each(function(){
+        var attrval = $(this).attr("data-imgname");
+        images+='<img src="images/nav/'+attrval+'.png">';
+    });
+    $('.navimg').append(images).find("img").hide();
+    $('.nav-list li a').hover(function(){
+        var index = $('.nav-list li a').index(this);
+        $('.navimg img').eq(index).stop(false,false).fadeIn(200);
+
+    },function(){
+        var index = $('.nav-list li a').index(this);
+        $('.navimg img').eq(index).stop(false,false).fadeOut(200);
+    });
 });
