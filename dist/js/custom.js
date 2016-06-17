@@ -242,10 +242,12 @@ $(document).ready(function(){
 
 
 
+    var windwid = $(window).outerWidth();
+    if(windwid>767){
+        var footerheight = $("footer").height();
+        $("<div></div>").insertBefore('footer').css("margin-bottom",footerheight);
+    }
 
-
-    var footerheight = $("footer").height();
-    $("<div></div>").insertBefore('footer').css("margin-bottom",footerheight);
 
 
 
@@ -331,4 +333,15 @@ $(document).ready(function(){
         var index = $('.nav-list li a').index(this);
         $('.navimg img').eq(index).stop(false,false).fadeOut(200);
     });
+
+    var portitem = $(".portfolio-item-content");
+
+    if(portitem.length){
+        portitem.each(function(index){
+            var imgsrc = $(this).children("img").attr("src");
+
+            imgsrc = 'url("'+imgsrc+'")';
+            $(this).css("background-image",imgsrc);
+        });
+    }
 });
