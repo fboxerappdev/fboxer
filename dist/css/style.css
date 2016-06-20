@@ -1977,6 +1977,35 @@ footer .footer ul li span {
   .project-pages .Project-page-info p {
     font-size: 20px;
   }
+  .about-services li {
+    width: 50%;
+  }
+  .port-slide-box .port-slider {
+    padding: 0;
+  }
+  .port-slide-box .port-slider .port-slide-item {
+    padding: 12px 10px;
+  }
+  .port-slide-box .port-slider .port-slide-item .info h3 {
+    font-size: 30px;
+    margin-top: 0;
+  }
+  .port-slide-box h2 {
+    font-size: 37px;
+    margin-bottom: 12px;
+  }
+  .port-slide-box .port-slider .bx-controls .bx-controls-direction {
+    display: none;
+  }
+  .about-services {
+    padding: 17px 20px;
+  }
+  .about-services li {
+    width: 100%;
+  }
+  .port-slide-box h2 {
+    font-size: 30px;
+  }
 }
 @media only screen and (min-width: 0px) and (max-width: 479px) {
   .page-header-content h2 {
@@ -2170,6 +2199,23 @@ footer .footer ul li span {
   .cs-topbox img:last-child {
     display: none;
   }
+  .about-services li {
+    width: 50%;
+  }
+  .port-slide-box .port-slider {
+    padding: 0;
+  }
+  .port-slide-box .port-slider .port-slide-item {
+    padding: 12px 80px 30px;
+  }
+  .port-slide-box .port-slider .port-slide-item .info h3 {
+    font-size: 30px;
+    margin-top: 0;
+  }
+  .port-slide-box h2 {
+    font-size: 37px;
+    margin-bottom: 12px;
+  }
 }
 @media only screen and (min-width: 0px) and (max-width: 991px) {
   .serv-page .serv-item {
@@ -2280,6 +2326,26 @@ footer .footer ul li span {
   .cs-topbox img:last-child {
     display: block;
   }
+  .port-slide-box .port-slider .port-slide-item .info h3 {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  .port-slide-box .port-slider .port-slide-item .info p {
+    font-size: 18px;
+  }
+  .port-slide-box h2 {
+    font-size: 35px;
+  }
+  .about-services li {
+    width: 33.33%;
+  }
+  .port-slide-box .port-slider {
+    padding: 40px 0;
+  }
+  .port-slide-box h2 {
+    font-size: 40px;
+    margin-bottom: 32px;
+  }
 }
 @media (min-width: 1280px) {
   .nav-box .navbar-info .nav-list li a {
@@ -2366,6 +2432,15 @@ footer .footer ul li span {
   .cs-topbox {
     padding-top: 54px;
   }
+  .port-slide-box .port-slider .port-slide-item .info h3 {
+    margin-top: 10px;
+  }
+  .port-slide-box .port-slider .port-slide-item .info p {
+    font-size: 21px;
+  }
+  .port-slide-box h2 {
+    font-size: 40px;
+  }
 }
 @media (min-width: 1500px) {
   .nav-box .navbar-info .nav-list li a {
@@ -2413,5 +2488,11 @@ footer .footer ul li span {
   }
   .project-pages .Project-page-info h3 {
     font-size: 38px;
+  }
+  .port-slide-box .port-slider .port-slide-item {
+    padding: 12px 0 30px;
+  }
+  .port-slide-box .port-slider .port-slide-item .info h3 {
+    margin-top: 60px;
   }
 }
