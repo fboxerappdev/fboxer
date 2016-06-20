@@ -168,7 +168,7 @@ header{
         font-size: 13px;
         margin: 28px 0;
       }
-      a{
+      a,p{
         color: #fff;
         display: inline-block;
         margin-bottom: 4px;
@@ -556,6 +556,7 @@ header{
   .portfolio-item{
     float: left;
     padding: 3px;
+    display:none;
     &.small-width{
       width: 25%;
     }
@@ -744,7 +745,6 @@ header{
     -webkit-appearance: none;
     -o-appearance: none;
     background: #fff url("../images/down.png") no-repeat scroll right center content-box border-box;
-    font-weight: bold;
     padding-right: 9px;
   }
   button{
@@ -893,8 +893,9 @@ header{
   p{
     color: #6c6c6c;
     font-size: 21px;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 23px;
+    text-align: left;
   }
 
   img
@@ -2053,9 +2054,6 @@ footer{
   .services-list .services-item {
     width: 50%;
   }
-  .services-list .services-item span {
-    font-size: 22px;
-  }
   .simple-pg {
     font-size: 18px;
   }
@@ -2145,6 +2143,10 @@ footer{
   }
   .port-slide-box h2 {
     font-size: 30px;
+  }
+
+  .casestudies p {
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 479px) {
@@ -2366,6 +2368,10 @@ footer{
   .port-slide-box h2 {
     font-size: 37px;
     margin-bottom: 12px;
+  }
+
+  .casestudies p {
+    font-size: 20px;
   }
 }
 
@@ -2597,6 +2603,10 @@ footer{
     font-size: 40px;
   }
 
+  .casestudies p {
+    font-size: 22px;
+  }
+
 }
 @media (min-width: 1500px) {
   .nav-box .navbar-info .nav-list li a {
@@ -2650,6 +2660,9 @@ footer{
   }
   .port-slide-box .port-slider .port-slide-item .info h3 {
     margin-top: 60px;
+  }
+  .casestudies p {
+    font-size: 26px;
   }
 }
 

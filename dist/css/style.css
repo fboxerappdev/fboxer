@@ -39,6 +39,7 @@ header .logo a,
 }
 .transition,
 .nav-box .navbar-info .right-text a,
+.nav-box .navbar-info .right-text p,
 .homeicon #home-icon,
 .portfolio .portfolio-item .portfolio-item-content::before,
 .portfolio .portfolio-item .abs-box a,
@@ -194,13 +195,15 @@ header .nav-toggle {
   font-size: 13px;
   margin: 28px 0;
 }
-.nav-box .navbar-info .right-text a {
+.nav-box .navbar-info .right-text a,
+.nav-box .navbar-info .right-text p {
   color: #fff;
   display: inline-block;
   margin-bottom: 4px;
   width: 100%;
 }
-.nav-box .navbar-info .right-text a:hover {
+.nav-box .navbar-info .right-text a:hover,
+.nav-box .navbar-info .right-text p:hover {
   margin-left: 4px;
 }
 .homeicon {
@@ -550,6 +553,7 @@ header .nav-toggle {
 .portfolio .portfolio-item {
   float: left;
   padding: 3px;
+  display: none;
 }
 .portfolio .portfolio-item.small-width {
   width: 25%;
@@ -731,7 +735,6 @@ header .nav-toggle {
   -webkit-appearance: none;
   -o-appearance: none;
   background: #fff url("../images/down.png") no-repeat scroll right center content-box border-box;
-  font-weight: bold;
   padding-right: 9px;
 }
 .contact-form button {
@@ -873,8 +876,9 @@ header .nav-toggle {
 .about-content p {
   color: #6c6c6c;
   font-size: 21px;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 23px;
+  text-align: left;
 }
 .about-content img {
   max-width: 100%;
@@ -1919,9 +1923,6 @@ footer .footer ul li span {
   .services-list .services-item {
     width: 50%;
   }
-  .services-list .services-item span {
-    font-size: 22px;
-  }
   .simple-pg {
     font-size: 18px;
   }
@@ -2005,6 +2006,9 @@ footer .footer ul li span {
   }
   .port-slide-box h2 {
     font-size: 30px;
+  }
+  .casestudies p {
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 479px) {
@@ -2215,6 +2219,9 @@ footer .footer ul li span {
   .port-slide-box h2 {
     font-size: 37px;
     margin-bottom: 12px;
+  }
+  .casestudies p {
+    font-size: 20px;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 991px) {
@@ -2441,6 +2448,9 @@ footer .footer ul li span {
   .port-slide-box h2 {
     font-size: 40px;
   }
+  .casestudies p {
+    font-size: 22px;
+  }
 }
 @media (min-width: 1500px) {
   .nav-box .navbar-info .nav-list li a {
@@ -2494,5 +2504,8 @@ footer .footer ul li span {
   }
   .port-slide-box .port-slider .port-slide-item .info h3 {
     margin-top: 60px;
+  }
+  .casestudies p {
+    font-size: 26px;
   }
 }
