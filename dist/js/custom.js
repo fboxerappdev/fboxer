@@ -344,4 +344,15 @@ $(document).ready(function(){
             $(this).css("background-image",imgsrc);
         });
     }
+    var servItem = $(".serv-item");
+    if(servItem.length) {
+        if(windwid<992){
+            servItem.each(function(){
+                $(this).find(".serv-item-info").prependTo($(this));
+            });
+        }
+    }
+
+
+
 });

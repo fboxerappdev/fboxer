@@ -674,7 +674,7 @@ header{
 
 .contact-info{
   display: inline-block;
-  padding: 30px 0;
+  padding: 30px 15px;
   text-align: center;
   width: 100%;
   img{
@@ -1338,7 +1338,7 @@ header{
     h3{
       color: #131313;
       font-size: 48px;
-      font-weight: 500;
+      font-weight: 400;
       margin-bottom: 22px;
     }
     p{
@@ -1906,6 +1906,12 @@ footer{
 @media (min-width: 0px) {
 
 }
+@media only screen and (min-width: 0px) and (max-width: 991px) {
+
+  .slider-area-inner.vdi {
+    height: 417px !important;
+  }
+}
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   .nav-box .navbar-info > div {
     align-self: baseline;
@@ -2021,9 +2027,94 @@ footer{
   .portfolio .portfolio-item .portfolio-item-content {
     height: 230px;
   }
-
   footer {
     position: relative;
+  }
+
+
+  .line-svg {
+    display: none;
+  }
+  .page-header-content p {
+    font-size: 26px;
+  }
+  .services-list .services-item span {
+    font-size: 26px;
+  }
+  .blk-hd {
+    font-size: 32px;
+  }
+  .simple-pg {
+    font-size: 20px;
+  }
+  .page-header-content {
+    display: none;
+  }
+  .services-list .services-item {
+    width: 50%;
+  }
+  .services-list .services-item span {
+    font-size: 22px;
+  }
+  .simple-pg {
+    font-size: 18px;
+  }
+  .serv-page .serv-item .serv-item-info div h3 {
+    font-size: 36px;
+  }
+  .serv-page .serv-item .serv-item-info div p {
+    font-size: 17px;
+  }
+  .serv-page {
+    margin: 0 auto;
+  }
+
+  .contact-info h3 {
+    font-size: 27px;
+  }
+  .contact-info p {
+    font-size: 15px;
+  }
+  .contact-info h4 {
+    font-size: 21px;
+  }
+  .contact-form .form-group {
+    margin-bottom: 15px;
+  }
+  .contact-form {
+    padding: 20px 0 !important;
+  }
+
+
+
+  .contact-info p {
+    font-size: 18px;
+  }
+  .cs-info h3 {
+    font-size: 36px;
+  }
+  .project-pages .Project-page-info {
+    padding-top: 10px;
+  }
+  .project-pages .Project-page-info h3 {
+    font-size: 28px;
+  }
+  .cs-topbox {
+    padding: 54px 0 0;
+  }
+
+  .cs-topbox img:last-child{
+    display: none;
+  }
+  .cs-topbox .links a {
+    font-size: 24px;
+    padding: 0 20px;
+  }
+  .cs-info h6 {
+    font-size: 25px;
+  }
+  .project-pages .Project-page-info p {
+    font-size: 20px;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 479px) {
@@ -2082,6 +2173,18 @@ footer{
   }
   .page-content{
     padding:0;
+  }
+  .services-list .services-item {
+    width: 100%;
+  }
+  .services-list {
+    margin: 0 -15px;
+  }
+  .serv-page .serv-item .serv-item-info div h3 {
+    font-size: 31px;
+  }
+  .cs-topbox {
+    display: none;
   }
 }
 @media (min-width: 768px) {
@@ -2155,8 +2258,98 @@ footer{
   .portfolio .portfolio-item.small-width {
     width: 50%;
   }
-  .slider-area-inner.vdi {
-    height: 417px !important;
+  .page-header-content span {
+    font-size: 35px;
+  }
+  .page-header-content .head-3 {
+    font-size: 42px;
+  }
+
+  .line-svg {
+    display: none;
+  }
+  .page-header-content p {
+    font-size: 26px;
+  }
+  .services-list .services-item span {
+    font-size: 26px;
+  }
+  .blk-hd {
+    font-size: 32px;
+  }
+  .simple-pg {
+    font-size: 20px;
+  }
+  .serv-page .serv-item .serv-item-info div h3 {
+    font-size: 36px;
+  }
+  .serv-page .serv-item .serv-item-info div p {
+    font-size: 17px;
+  }
+
+  .contact-info h3 {
+    font-size: 36px;
+  }
+  .contact-info p {
+    font-size: 17px;
+  }
+
+
+
+  .contact-info p {
+    font-size: 18px;
+  }
+  .cs-topbox .links a {
+    font-size: 28px;
+  }
+  .cs-info h3 {
+    font-size: 40px;
+  }
+  .project-pages .Project-page-info {
+    padding-top: 10px;
+  }
+  .project-pages .Project-page-info h3 {
+    font-size: 33px;
+  }
+  .cs-topbox {
+    padding-top: 54px;
+  }
+
+  .cs-topbox img:last-child{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 991px) {
+
+  .serv-page .serv-item {
+    display: inline-block;
+  }
+  .serv-page .serv-item .serv-item-img {
+    height: inherit;
+    width: 100%;
+  }
+  .serv-page .serv-item .serv-item-img img {
+    left: auto !important;
+    margin-left: 5%;
+    position: relative !important;
+    right: auto !important;
+    width: 90%;
+  }
+  .serv-page .serv-item .serv-item-info {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .serv-page .serv-item .serv-item-info div {
+    float: left !important;
+    max-width: 100% !important;
+  }
+
+  .ser-detail-item .ser-info-box {
+    height: auto;
+    margin: 0 !important;
+    padding: 80px 6px;
+    width: 100%;
   }
 }
 @media (min-width: 992px) {
@@ -2209,13 +2402,37 @@ footer{
   .portfolio .portfolio-item.small-width {
     width: 25%;
   }
-  .line-svg {
-    display: none;
-  }
   .ser-detail-item .ser-info-box {
     height: initial;
     padding: 90px 0;
   }
+  .services-list .services-item span {
+    font-size: 30px;
+  }
+
+  .page-header-content span {
+    font-size: 46px;
+  }
+  .page-header-content .head-3 {
+    font-size: 56px;
+  }
+  .page-header-content p {
+    font-size: 32px;
+  }
+  .ser-detail-item .ser-info-box {
+    width: 50%;
+  }
+  .serv-page .serv-item .serv-item-img {
+    height: 423px;
+  }
+  .serv-page .serv-item .serv-item-img img {
+    height: 100%;
+    width: initial;
+  }
+  .cs-topbox img:last-child{
+      display: block;
+  }
+
 
 }
 @media (min-width: 1280px) {
@@ -2273,7 +2490,36 @@ footer{
     height: 590px;
     padding: 130px 0 100px 10%;
   }
-
+  .services-list .services-item span {
+    font-size: 36px;
+  }
+  .blk-hd {
+    font-size: 36px;
+  }
+  .simple-pg {
+    font-size: 22px;
+  }
+  .page-header-content span {
+    font-size: 54px;
+  }
+  .page-header-content .head-3 {
+      font-size: 63px;
+  }
+  .page-header-content p {
+    font-size: 37px;
+  }
+  .serv-page .serv-item .serv-item-img {
+    height: 533px;
+  }
+  .serv-page .serv-item .serv-item-info div h3 {
+    font-size: 43px;
+  }
+  .serv-page .serv-item .serv-item-info div p {
+    font-size: 18px;
+  }
+  .cs-topbox {
+    padding-top: 54px;
+  }
 }
 @media (min-width: 1500px) {
   .nav-box .navbar-info .nav-list li a {
@@ -2294,6 +2540,35 @@ footer{
   .portfolio .portfolio-item .portfolio-item-content {
     height: 320px;
   }
+  .blk-hd {
+    font-size: 40px;
+  }
+  .serv-page .serv-item .serv-item-img {
+    height: 630px;
+  }
+  .serv-page .serv-item .serv-item-img img {
+    height:initial;
+    width: initial;
+  }
+  .contact-info h3 {
+    font-size: 42px;
+  }
+  .contact-info p {
+    font-size: 19px;
+  }
+  .cs-topbox .links a {
+    font-size: 34px;
+  }
+  .cs-info h3 {
+    font-size: 48px;
+  }
+  .project-pages .Project-page-info {
+    padding-top:  40px;
+  }
+  .project-pages .Project-page-info h3 {
+    font-size: 38px;
+  }
+
 }
 
 
