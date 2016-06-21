@@ -299,7 +299,7 @@ $(document).ready(function(){
     }
 
 
-    $(window).load(function(){
+    //$(window).load(function(){
         if($('.nav-box').length){
             $(".nav-toggle").click(function(){
                 $('.nav-box').addClass("show");
@@ -313,7 +313,7 @@ $(document).ready(function(){
             });
 
         }
-    });
+    //});
 
 
 
