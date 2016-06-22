@@ -261,6 +261,21 @@ $(document).ready(function(){
         });
     }
 
+
+    if($(".form-box").length){
+        $('.top-btns a').on("click",function(){
+            $('.top-btns a').removeClass();
+            $(this).addClass("active");
+            var index = $(this).index();
+            $(".form-box>div").hide();
+            $(".form-box>div:eq('"+index+"')").fadeIn();
+        });
+    }
+
+
+
+
+
     $(".topbtn").goToTop();
 
     if($(".ser-detail-item").length){
