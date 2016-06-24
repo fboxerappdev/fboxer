@@ -973,7 +973,7 @@ header .nav-toggle {
   font-weight: 500;
 }
 .port-slide-box .port-slider .port-slide-item .img img {
-  width: 100%;
+  float: right;
 }
 .port-slide-box .port-slider .bx-controls .bx-controls-direction a {
   height: 90px;
