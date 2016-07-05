@@ -130,15 +130,15 @@ $(document).ready(function(){
 
         function stopNav(){
             if ($(this).scrollTop() > imgheight) {
-                $(".careers-head").css({
-                    position:"fixed",
-                    left:"25px",
-                });
-            } else {
-                $(".careers-head").css({
-                    position:"absolute",
-                    left:0
-                });
+                    $(".careers-head").css({
+                        position:"fixed",
+                        left:"25px",
+                    });
+                } else {
+                    $(".careers-head").css({
+                        position:"absolute",
+                        left:0
+                    });
             }
         }
 
@@ -314,41 +314,6 @@ $(document).ready(function(){
     }
 
 
-    //$(window).load(function(){
-        if($('.nav-box').length){
-            $(".nav-toggle").click(function(){
-                $('.nav-box').addClass("show");
-                setTimeout(function(){
-                    $('.nav-box').find("#mnbox").fadeIn();
-                },700);
-            });
-            $(".nav-box span").click(function(){
-                $('.nav-box').removeClass("show");
-                $('.nav-box').find("#mnbox").hide();
-            });
-
-        }
-    //});
-
-
-
-    //nav bar change image on hover
-
-    var images="";
-    $('.nav-list li a').each(function(){
-        var attrval = $(this).attr("data-imgname");
-        images+='<img src="images/nav/'+attrval+'.png">';
-    });
-    $('.navimg').append(images).find("img").hide();
-    $('.nav-list li a').hover(function(){
-        var index = $('.nav-list li a').index(this);
-        $('.navimg img').eq(index).stop(false,false).fadeIn(200);
-
-    },function(){
-        var index = $('.nav-list li a').index(this);
-        $('.navimg img').eq(index).stop(false,false).fadeOut(200);
-    });
-
     var portitem = $(".portfolio-item-content");
 
     if(portitem.length){
@@ -368,6 +333,14 @@ $(document).ready(function(){
         }
     }
 
+
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
+           $("header").addClass("bg");
+        } else {
+            $("header").removeClass("bg");
+        }
+    });
 
 
 });
