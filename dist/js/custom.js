@@ -334,13 +334,72 @@ $(document).ready(function(){
     }
 
 
-    $(window).scroll(function(){
+    function stop(){
         if ($(this).scrollTop() > 50) {
-           $("header").addClass("bg");
+            $("header").addClass("bg");
         } else {
             $("header").removeClass("bg");
         }
+    }
+
+    $(window).scroll(function(){
+        stop();
     });
+    stop();
+
+    function resize(){
+        var winwid = $(window).width();
+        if(winwid>991)
+        {
+            var high = $('.card-info').parent(".card").height();
+            $('.card-info').css("height",high);
+        }
+    }
+
+    resize();
+
+
+    function imains(){
+        var winwid = $(window).width();
+        if(winwid>991)
+        {
+            var high1 = $('.block2 .right img').height();
+            $('.block2 .left').css("height",high1);
+
+            var high2 = $('.block1 .left img').height();
+            $('.block1 .right').css("height",high2);
+
+            var high3 = $('.block3 .left img').height();
+            $('.block3 .right').css("height",high3);
+
+            var high4 = $('.block4 .right img').height();
+            $('.block4 .left').css("height",high4);
+
+            var high5 = $('#bk1 .left img').height();
+            $('#bk1 .right').css("height",high5);
+
+            var high6 = $('#bk2 .left img').height();
+            $('#bk2 .right').css("height",high6);
+
+
+        }
+    }
+
+    $(window).resize(function(){
+        imains();
+    });
+    imains();
+
+
+
+    $(".nav-toggle").click(function(){
+        $(".right-bar").toggleClass("open");
+    });
+    $(".right-bar>i").click(function(){
+        $(".right-bar").removeClass("open");
+    })
+
+
 
 
 });
