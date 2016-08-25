@@ -5,8 +5,8 @@ body {
   margin: 0;
   padding: 0;
   outline: none;
-  overflow-x: hidden ;
-  font-family: 'Raleway', arial;
+  overflow-x: hidden;
+  font-family: "futura-pt", arial, sans-serif;
 }
 .wapper {
   position: relative;
@@ -47,6 +47,7 @@ body {
 header,
 header .nav-box ul li a,
 .right-bar ul li a,
+.right-bar ul li a i,
 .portfolio .portfolio-item .portfolio-item-content::before,
 .portfolio .portfolio-item .abs-box a,
 .work-flow a,
@@ -181,9 +182,25 @@ header.bg .nav-toggle {
   color: #bf0f23;
   cursor: pointer;
   font-size: 24px;
-  padding: 11px 14px;
+  height: 37px;
+  padding: 16px 20px;
   position: absolute;
-  right: 0;
+  right: 16px;
+  top: 14px;
+  width: 40px;
+}
+.right-bar > i:after,
+.right-bar > i:before {
+  background: #fff none repeat scroll 0 0;
+  content: "";
+  height: 2px;
+  left: 2px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 88%;
+}
+.right-bar > i:before {
+  transform: rotate(-45deg);
 }
 .right-bar ul {
   margin-top: 110px;
@@ -193,13 +210,21 @@ header.bg .nav-toggle {
   color: #fff;
   display: inline-block;
   font-size: 24px;
-  font-weight: 600;
-  padding: 10px 20px;
+  font-weight: 500;
+  padding: 10px 0;
   text-transform: uppercase;
   width: 100%;
 }
+.right-bar ul li a i {
+  color: #fff;
+  font-size: 21px;
+  transform: scale(0) translate(-35px, 0px);
+}
 .right-bar ul li a:hover {
-  background: #BF0F23;
+  padding: 10px;
+}
+.right-bar ul li a:hover i {
+  transform: scale(1) translate(0, 0px);
 }
 .right-bar.open {
   right: 0;
@@ -320,20 +345,23 @@ header.bg .nav-toggle {
   top: auto !important;
 }
 .video-text {
+  bottom: 100px;
   color: #fff;
-  font-size: 70px;
-  font-weight: 400;
+  font-size: 58px;
+  font-weight: 700;
   line-height: 1.4;
   position: absolute;
   text-align: center;
-  text-transform: capitalize;
-  top: 35%;
+  text-transform: uppercase;
   width: 100%;
 }
 .video-text small {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 38px;
-  margin: 0;
+  display: inline-block;
+  font-size: 22px;
+  text-transform: capitalize;
+  transform: translate(0px, -30px);
+  width: 100%;
 }
 .portfolio-slider {
   background: #9f9f9f;
@@ -432,14 +460,14 @@ header.bg .nav-toggle {
   color: red;
 }
 .page-content .we-build h3 {
-  font-size: 27px;
-  font-weight: 400;
+  font-size: 34px;
+  font-weight: 700;
   margin-top: 35px;
   text-transform: capitalize;
 }
 .page-content .we-build p {
   display: table;
-  font-size: 18px;
+  font-size: 16px;
   margin: 14px auto 24px;
   max-width: 1150px;
 }
@@ -460,7 +488,8 @@ header.bg .nav-toggle {
   width: 480px;
 }
 .head2 {
-  font-size: 32px;
+  font-family: freight-display-pro, serif;
+  font-size: 40px;
   font-weight: 400;
   line-height: 1.4;
   text-align: center;
@@ -526,8 +555,11 @@ header.bg .nav-toggle {
 }
 .detailed-info p {
   font-size: 22px;
-  margin: 17px 0;
+  margin: 0 0 17px;
   text-align: center;
+}
+.detailed-info h2 {
+  margin-bottom: 0;
 }
 .portfolio,
 .container-full {
@@ -625,7 +657,7 @@ header.bg .nav-toggle {
 }
 .work-flow h4 {
   color: #fff;
-  font-size: 26px;
+  font-size: 33px;
   margin: 35px 0 30px;
 }
 .work-flow p {
@@ -840,23 +872,26 @@ header.bg .nav-toggle {
 }
 .page-header-content h2 b {
   display: inline-block;
-  font-size: 1.1em;
+  font-size: 1.4em;
   font-weight: 400;
   margin: 8px 0;
 }
 .page-header-content .head-3 {
   color: #fff;
-  font-size: 63px;
-  font-weight: 500;
-  margin: 5px 0 20px;
+  font-size: 62px;
+  font-weight: 600;
+  margin: 8px 0 10px;
+  text-transform: uppercase;
 }
 .page-header-content span {
   color: #fff;
+  font-size: 30px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 .page-header-content p {
-  color: #c5c5c5;
-  font-size: 37px;
+  color: #fff;
+  font-size: 27px;
 }
 .page-header-content ul {
   display: inline-block;
@@ -1165,15 +1200,15 @@ header.bg .nav-toggle {
 }
 .ser-detail-item .ser-info-box h3 {
   color: #2066ab;
-  font-size: 33px;
+  font-size: 31px;
   font-weight: 500;
   letter-spacing: normal;
   line-height: 44px;
-  margin: 0 0 20px;
+  margin: 7px 0;
 }
 .ser-detail-item .ser-info-box p {
   color: #0f0f0f;
-  font-size: 22px;
+  font-size: 20px;
 }
 .ser-detail-item .ser-info-box.color-b1 span {
   color: #999999;
@@ -1538,12 +1573,13 @@ footer .footer ul li span {
 }
 .serv-page .serv-item .serv-item-info div h3 {
   color: #202020;
-  font-size: 43px;
+  font-size: 27px;
   font-weight: 500;
   margin: 0 0 6px;
   text-transform: uppercase;
 }
 .serv-page .serv-item .serv-item-info div h3 b {
+  font-size: 1.9em;
   font-weight: 600;
 }
 .serv-page .serv-item .serv-item-info div p {
@@ -1972,7 +2008,7 @@ footer .footer ul li span {
 .block3 h3 {
   background: #dd005d none repeat scroll 0 0;
   color: #fff;
-  font-size: 15px;
+  font-size: 22px;
   line-height: 1.3;
   padding: 30px 20px 30px 35%;
   position: absolute;
@@ -2097,6 +2133,7 @@ footer .footer ul li span {
   display: flex;
   float: left;
   width: 50%;
+  min-height: 400px;
 }
 .design-block .right div {
   align-self: center;
@@ -2250,12 +2287,6 @@ footer .footer ul li span {
   .slider-area-inner.vdi {
     height: 260px !important;
   }
-  .page-header-content p {
-    font-size: 25px;
-  }
-  .page-header-content span {
-    font-size: 40px;
-  }
   .portfolio .portfolio-item.small-width {
     width: 50%;
   }
@@ -2267,9 +2298,6 @@ footer .footer ul li span {
   }
   .line-svg {
     display: none;
-  }
-  .page-header-content p {
-    font-size: 22px;
   }
   .services-list .services-item span {
     font-size: 22px;
@@ -2285,9 +2313,6 @@ footer .footer ul li span {
   }
   .simple-pg {
     font-size: 14px;
-  }
-  .serv-page .serv-item .serv-item-info div h3 {
-    font-size: 36px;
   }
   .serv-page .serv-item .serv-item-info div p {
     font-size: 17px;
@@ -2500,9 +2525,6 @@ footer .footer ul li span {
   .services-list {
     margin: 0 -15px;
   }
-  .serv-page .serv-item .serv-item-info div h3 {
-    font-size: 31px;
-  }
   .cs-topbox {
     display: none;
   }
@@ -2607,17 +2629,8 @@ footer .footer ul li span {
   .portfolio .portfolio-item.small-width {
     width: 50%;
   }
-  .page-header-content span {
-    font-size: 35px;
-  }
-  .page-header-content .head-3 {
-    font-size: 42px;
-  }
   .line-svg {
     display: none;
-  }
-  .page-header-content p {
-    font-size: 26px;
   }
   .services-list .services-item span {
     font-size: 22px;
@@ -2627,9 +2640,6 @@ footer .footer ul li span {
   }
   .simple-pg {
     font-size: 16px;
-  }
-  .serv-page .serv-item .serv-item-info div h3 {
-    font-size: 36px;
   }
   .serv-page .serv-item .serv-item-info div p {
     font-size: 17px;
@@ -2812,15 +2822,6 @@ footer .footer ul li span {
   .services-list .services-item span {
     font-size: 25px;
   }
-  .page-header-content span {
-    font-size: 38px;
-  }
-  .page-header-content .head-3 {
-    font-size: 56px;
-  }
-  .page-header-content p {
-    font-size: 32px;
-  }
   .ser-detail-item .ser-info-box {
     width: 50%;
   }
@@ -2956,20 +2957,8 @@ footer .footer ul li span {
   .simple-pg {
     font-size: 18px;
   }
-  .page-header-content span {
-    font-size: 45px;
-  }
-  .page-header-content .head-3 {
-    font-size: 63px;
-  }
-  .page-header-content p {
-    font-size: 30px;
-  }
   .serv-page .serv-item .serv-item-img {
     height: 533px;
-  }
-  .serv-page .serv-item .serv-item-info div h3 {
-    font-size: 43px;
   }
   .serv-page .serv-item .serv-item-info div p {
     font-size: 18px;
